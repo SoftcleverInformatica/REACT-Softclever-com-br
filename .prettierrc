@@ -1,3 +1,9 @@
 {
-    "format": "prettier --write \"src/**/*.{js,ts,tsx,json}\""
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "endOfLine": "crlf",
+    "semi": false,
+    "trailingComma": "es5",
+    "useTabs": true,
+    "tabWidth": 4,
+    "singleQuote": false
 }

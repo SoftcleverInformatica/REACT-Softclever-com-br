@@ -1,11 +1,13 @@
+import Footer from "./components/Footer"
+import MainSlider from "./components/MainSlider"
+
 function App() {
 	return (
 		<>
-			<div className="bg-primary w-12 h-12">
-				<h1 className="text-3xl font-bold underline">oie</h1>
-			</div>
+			<MainSlider />
+			<Footer />
 		</>
-	);
+	)
 }
 
-export default App;
+export default App
