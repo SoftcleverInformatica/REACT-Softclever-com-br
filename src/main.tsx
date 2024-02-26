@@ -4,11 +4,16 @@ import ReactDOM from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import "./index.css"
 import Home from "./pages/Home.tsx"
+import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade.tsx"
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Home />,
+	},
+	{
+		path: "/politica-de-privacidade",
+		element: <PoliticaDePrivacidade />,
 	},
 ])
 

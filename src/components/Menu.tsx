@@ -49,7 +49,7 @@ const ChevronDown: React.FC<SvgProps> = ({ fill, size, height, width, ...props }
 	)
 }
 
-export default function Menu() {
+function Menu() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	const menuItems = [
@@ -158,3 +158,5 @@ export default function Menu() {
 		</Navbar>
 	)
 }
+
+export default Menu
