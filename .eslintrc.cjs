@@ -17,7 +17,7 @@ module.exports = {
 		],
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
-        "prettier/prettier": ["error", { "semi": false, "useTabs": true, "trailingComma": "es5" }],
+        "prettier/prettier": ["error", { "semi": false, "useTabs": true, "trailingComma": "es5", "printWidth": 160 }],
 		indent: ["error", "tab"],
         semi: ["error", "never"],
 	},
