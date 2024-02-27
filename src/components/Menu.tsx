@@ -109,10 +109,17 @@ function Menu() {
 	}
 
 	return (
-		<Navbar className="bg-second px-2" isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen} position="static" isBordered isBlurred={false}>
+		<Navbar
+			className="w-full justify-between bg-second px-2"
+			isMenuOpen={isMenuOpen}
+			onMenuOpenChange={setIsMenuOpen}
+			position="static"
+			isBordered
+			isBlurred={false}
+		>
 			<NavbarContent>
-				<NavbarBrand>
-					<Image className="h-12 rounded-none" src="src/assets/images/png/softclever-logo.png" />
+				<NavbarBrand className="aspect-[172/48] h-12">
+					<Image className="aspect-[172/48] h-12 rounded-none" src="src/assets/images/png/softclever-logo.png" />
 				</NavbarBrand>
 			</NavbarContent>
 

@@ -15,6 +15,9 @@ export default {
 				second: "#004767",
 				third: "#03BFCB",
 			},
+			fontFamily: {
+				helvetica: "Helvetica, Arial, sans-serif",
+			},
 		},
 	},
 	darkMode: "class",
