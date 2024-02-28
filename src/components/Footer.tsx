@@ -9,15 +9,15 @@ function Footer() {
 				<h1 className="text-lg font-black text-first sm:text-xl">REDES SOCIAIS</h1>
 				<p className="text-ms font-medium text-first opacity-80 sm:text-sm">Siga-nos e fique por dentro das novidades.</p>
 				<div className="flex">
-					<div className="flex h-7 w-10 items-center justify-center bg-[#3B5998]">
+					<Link className="flex h-7 w-10 items-center justify-center bg-[#3B5998]" to={"https://www.facebook.com/softcleverinformatica"}>
 						<FontAwesomeIcon icon={faFacebookF} style={{ color: "#ffffff" }} />
-					</div>
-					<div className="flex h-7 w-10 items-center justify-center bg-[#464646]">
+					</Link>
+					<Link className="flex h-7 w-10 items-center justify-center bg-[#464646]" to={"https://www.instagram.com/soft.clever/"}>
 						<FontAwesomeIcon icon={faInstagram} style={{ color: "#ffffff" }} size="lg" />
-					</div>
-					<div className="flex h-7 w-10 items-center justify-center bg-[#cc181e]">
+					</Link>
+					<Link className="flex h-7 w-10 items-center justify-center bg-[#cc181e]" to={"https://www.youtube.com/channel/UCd15UMZr95UzVWWKbu5khTw"}>
 						<FontAwesomeIcon icon={faYoutube} style={{ color: "#ffffff" }} />
-					</div>
+					</Link>
 				</div>
 			</div>
 			<div className="flex w-full max-w-lg flex-col gap-4 lg:w-[50%]">
