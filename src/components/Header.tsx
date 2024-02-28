@@ -12,7 +12,7 @@ function Header({ title, subtitle }: IHeader) {
 					<h2 className="w-full font-bold text-third">{subtitle.toUpperCase()}</h2>
 				</div>
 				<div className="hidden w-full items-center justify-end lg:flex lg:max-w-[50%]">
-					<p className="font-extrabold text-white ">
+					<p className="font-extrabold text-white">
 						Home <span className="pl-2 font-extrabold text-third">/ {title}</span>
 					</p>
 				</div>
