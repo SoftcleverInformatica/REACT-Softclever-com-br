@@ -18,6 +18,9 @@ export default {
 			fontFamily: {
 				helvetica: "Helvetica, Arial, sans-serif",
 			},
+			backgroundImage: {
+				header: "url('assets/images/jpg/bg-header.jpg')",
+			},
 		},
 	},
 	darkMode: "class",

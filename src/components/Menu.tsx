@@ -110,7 +110,7 @@ function Menu() {
 
 	return (
 		<Navbar
-			className="w-full justify-between bg-second px-2"
+			className="flex w-full justify-center bg-second px-2 lg:px-0"
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
 			position="static"
@@ -119,7 +119,9 @@ function Menu() {
 		>
 			<NavbarContent>
 				<NavbarBrand className="aspect-[172/48] h-12">
-					<Image className="aspect-[172/48] h-12 rounded-none" src="src/assets/images/png/softclever-logo.png" />
+					<Link className="aspect-[172/48] h-12" to={"/"}>
+						<Image className="aspect-[172/48] h-12 rounded-none" src="src/assets/images/png/softclever-logo.png" />
+					</Link>
 				</NavbarBrand>
 			</NavbarContent>
 
@@ -127,7 +129,7 @@ function Menu() {
 				{menuItems.map((item, index) => (
 					<NavbarItem key={item.key} isActive>
 						{index !== 1 ? (
-							<Link className="text-ms font-bold text-first" to={item.key}>
+							<Link className="text-ms font-bold text-first" to={`/${item.key}`}>
 								{item.label}
 							</Link>
 						) : (
@@ -149,7 +151,7 @@ function Menu() {
 				{menuItems.map((item, index) => (
 					<NavbarItem key={item.key} isActive>
 						{index !== 1 ? (
-							<Link className="text-ms font-bold text-first" to={item.key}>
+							<Link className="text-ms font-bold text-first" to={`/${item.key}`}>
 								{item.label}
 							</Link>
 						) : (
