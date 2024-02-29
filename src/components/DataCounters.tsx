@@ -76,7 +76,7 @@ const DataCounters = () => {
 
 	return (
 		<>
-			<div className="flex w-full flex-wrap">
+			<div className="flex w-full flex-wrap sm:max-w-3xl lg:max-w-screen-lg ">
 				<DataCounter
 					classNames="py-4 sm:pr-4 sm:border-r-1 border-[#bcced8] "
 					icon={<FaRegUser className="text-white" size={20} />}

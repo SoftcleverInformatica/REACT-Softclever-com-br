@@ -9,8 +9,8 @@ function ASoftClever() {
 		<>
 			<Menu />
 			<Header title={"A Soft Clever"} subtitle="Nossos valores" />
-			<main className="flex w-full flex-col justify-center gap-8 p-16">
-				<div className="item-center flex w-full flex-col justify-center gap-8 lg:flex-row lg:gap-0">
+			<main className="flex w-full flex-col items-center justify-center gap-8 p-16">
+				<div className="item-center flex w-full flex-col justify-center gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row lg:gap-0 ">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%] lg:flex-row">
 							<p className="w-full text-base font-medium text-[#3c4a54]">
@@ -33,8 +33,8 @@ function ASoftClever() {
 						</div>
 					</div>
 				</div>
-				<div className="item-center flex w-full flex-col justify-center gap-8 lg:flex-row lg:gap-0">
-					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
+				<div className="item-center flex w-full flex-col justify-center gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row lg:gap-0 ">
+					<div className="flex w-full flex-col gap-8 lg:flex-row">
 						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[67%]">
 							<h3 className="w-full font-bold text-third">O QUE NÓS FAZEMOS</h3>
 							<h2 className="w-full text-3xl font-black text-second">Soluções</h2>
