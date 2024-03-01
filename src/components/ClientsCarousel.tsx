@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react"
 
-interface VideosCarouselProps {
-	videos: string[] // Alterado para aceitar links do YouTube
+interface ClientsCarouselProps {
+	images: string[] // Alterado para aceitar links do YouTube
 }
 
-const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
+const ClientsCarousel: React.FC<ClientsCarouselProps> = ({ images }) => {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const [translateX, setTranslateX] = useState(0)
 	const [autoPlay, setAutoPlay] = useState(true)
-	const [numDots, setNumDots] = useState(videos.length)
+	const [numDots, setNumDots] = useState(images.length)
 
 	const nextSlide = () => {
 		if (currentSlide !== numDots - 1) {
@@ -26,22 +26,15 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 		}
 	}
 
-	const goToSlide = (index: number) => {
-		setCurrentSlide(index)
-	}
-
 	useEffect(() => {
 		const handleResize = () => {
 			const windowWidth = window.innerWidth
-			if (windowWidth < 640) {
-				setNumDots(videos.length)
-				setTranslateX(currentSlide * 100)
-			} else if (windowWidth >= 640 && windowWidth < 1024) {
-				setNumDots(videos.length - 1)
+			if (windowWidth < 1024) {
+				setNumDots(images.length - 1)
 				setTranslateX(currentSlide * (100 / 2))
 			} else {
-				setNumDots(videos.length - 2)
-				setTranslateX(currentSlide * (100 / 3))
+				setNumDots(images.length - 3)
+				setTranslateX(currentSlide * (100 / 4))
 			}
 		}
 
@@ -59,7 +52,7 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 			clearInterval(interval)
 			window.removeEventListener("resize", handleResize)
 		}
-	}, [currentSlide, autoPlay, videos, nextSlide])
+	}, [currentSlide, autoPlay, images, nextSlide])
 
 	const handlePause = () => {
 		setAutoPlay(false)
@@ -75,31 +68,18 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 			<div className="relative w-full" onClick={handlePause}>
 				<div className="overflow-hidden rounded-md">
 					<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
-						{videos.map((video, index) => (
-							<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2 lg:w-1/3">
-								<div className="relative sm:px-4">
-									<iframe
-										src={getEmbedLink(video)} // Obtém o link de incorporação do YouTube
-										title={`YouTube Video ${index}`} // Título para acessibilidade
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" // Permissões
-										allowFullScreen // Habilita o modo de tela cheia
+						{images.map((image, index) => (
+							<div key={index} className="relative w-1/2 flex-none overflow-hidden lg:w-1/4">
+								<div className="relative px-4">
+									<img
+										src={getImageSrc(image)} // Obtém o link de incorporação do YouTube
 										className="aspect-video h-full w-full rounded-md"
-									></iframe>
+									></img>
 								</div>
 							</div>
 						))}
 					</div>
 				</div>
-				<div className="absolute bottom-[-16px] left-1/2 flex -translate-x-1/2 transform space-x-2">
-					{Array.from(Array(numDots), (_, index) => (
-						<button
-							key={index}
-							onClick={() => goToSlide(index)}
-							className={`h-2 w-2 rounded-full border-1 border-second transition-all hover:bg-second ${index === currentSlide ? "w-4 bg-second" : "bg-transparent"}`}
-						></button>
-					))}
-				</div>
-
 				<button
 					className={`absolute left-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
 						currentSlide === 0 ? "hidden" : ""
@@ -122,11 +102,8 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 }
 
 // Função para converter o link do YouTube em um link de incorporação
-function getEmbedLink(link: string): string {
-	// Extrai o ID do vídeo do link do YouTube
-	const videoId = link.split("v=")[1]
-	// Retorna o link de incorporação formatado
-	return `https://www.youtube.com/embed/${videoId}`
+function getImageSrc(src: string): string {
+	return `assets/images/clients/${src}`
 }
 
-export default VideosCarousel
+export default ClientsCarousel

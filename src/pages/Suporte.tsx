@@ -6,7 +6,7 @@ import SupportWhatsapp from "../components/SupportWhatsapp"
 import VideosCarousel from "../components/VideosCarousel"
 import Whatsapp from "../components/Whatsapp"
 
-function ASoftClever() {
+function Suporte() {
 	const videos = [
 		"https://www.youtube.com/watch?v=zTJhwfRWWjw",
 		"https://www.youtube.com/watch?v=T87FxxWCDJs",
@@ -82,4 +82,4 @@ function ASoftClever() {
 	)
 }
 
-export default ASoftClever
+export default Suporte

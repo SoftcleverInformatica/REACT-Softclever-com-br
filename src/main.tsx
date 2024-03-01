@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import "./index.css"
 import ASoftClever from "./pages/ASoftClever.tsx"
+import Clientes from "./pages/Clientes.tsx"
 import Home from "./pages/Home.tsx"
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade.tsx"
 import Suporte from "./pages/Suporte.tsx"
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 	{
 		path: "/suporte",
 		element: <Suporte />,
+	},
+	{
+		path: "/clientes",
+		element: <Clientes />,
 	},
 ])
 
