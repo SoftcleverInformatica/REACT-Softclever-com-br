@@ -69,9 +69,9 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 	}
 
 	return (
-		<div className="item-center flex w-full flex-col justify-center gap-8 bg-background p-8 sm:p-16">
-			<p className="text-ms font-bold text-third">SOLUÇÕES</p>
-			<h3></h3>
+		<div className="item-center flex w-full flex-col justify-center gap-2 bg-background p-8 sm:p-16">
+			<p className="text-ms font-bold text-third sm:text-sm">SOLUÇÕES</p>
+			<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Vídeos demonstrativos</h3>
 			<div className="relative w-full" onClick={handlePause}>
 				<div className="overflow-hidden">
 					<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
