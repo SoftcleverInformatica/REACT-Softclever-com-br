@@ -14,12 +14,15 @@ export default {
 				first: "#ffffff",
 				second: "#004767",
 				third: "#03BFCB",
+				text: "#404d60",
+				background: "#e4edf3",
 			},
 			fontFamily: {
 				helvetica: "Helvetica, Arial, sans-serif",
 			},
 			backgroundImage: {
 				header: "url('assets/images/jpg/bg-header.jpg')",
+				support: "url('assets/images/jpg/women-support.jpg')",
 			},
 		},
 	},

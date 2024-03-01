@@ -6,6 +6,7 @@ import "./index.css"
 import ASoftClever from "./pages/ASoftClever.tsx"
 import Home from "./pages/Home.tsx"
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade.tsx"
+import Suporte from "./pages/Suporte.tsx"
 
 const router = createBrowserRouter([
 	{
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
 	{
 		path: "/a-soft-clever",
 		element: <ASoftClever />,
+	},
+	{
+		path: "/suporte",
+		element: <Suporte />,
 	},
 ])
 
