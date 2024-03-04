@@ -5,8 +5,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import "./index.css"
 import ASoftClever from "./pages/ASoftClever.tsx"
 import Clientes from "./pages/Clientes.tsx"
+import Contato from "./pages/Contato.tsx"
 import Home from "./pages/Home.tsx"
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade.tsx"
+import SatENfce from "./pages/SatENfce.tsx"
 import Suporte from "./pages/Suporte.tsx"
 
 const router = createBrowserRouter([
@@ -23,12 +25,20 @@ const router = createBrowserRouter([
 		element: <ASoftClever />,
 	},
 	{
+		path: "/clientes",
+		element: <Clientes />,
+	},
+	{
+		path: "/contato",
+		element: <Contato />,
+	},
+	{
 		path: "/suporte",
 		element: <Suporte />,
 	},
 	{
-		path: "/clientes",
-		element: <Clientes />,
+		path: "/sat-e-nfc-e",
+		element: <SatENfce />,
 	},
 ])
 

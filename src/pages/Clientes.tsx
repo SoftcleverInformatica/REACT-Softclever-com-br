@@ -68,8 +68,8 @@ function Clientes() {
 		<>
 			<Menu />
 			<Header title={"Suporte"} subtitle="Entre em contato" />
-			<main className="flex w-full flex-col items-center justify-center gap-8 ">
-				<ClientsCarousel images={images} />
+			<ClientsCarousel images={images} />
+			<main className="flex w-full flex-col items-center justify-center gap-8 bg-background px-8 pb-8 sm:px-16 sm:pb-16">
 				<DataCounters />
 			</main>
 			<Footer />

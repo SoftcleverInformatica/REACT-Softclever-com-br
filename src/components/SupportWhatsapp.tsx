@@ -2,7 +2,7 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
 
-function Whatsapp() {
+function SupportWhatsapp() {
 	return (
 		<Link
 			className="relative h-24 w-full max-w-[336px]"
@@ -36,4 +36,4 @@ function Whatsapp() {
 	)
 }
 
-export default Whatsapp
+export default SupportWhatsapp
