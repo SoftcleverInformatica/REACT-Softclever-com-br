@@ -14,8 +14,14 @@ interface ProductsProps {
 
 function Products({ title, mensal, anual, semestral }: ProductsProps) {
 	const location = useLocation()
+
+	const formatPrice = (price: number) => {
+		return price.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+	}
+
 	const createWhatsappLink = (planName: string, price: number) => {
-		const message = `Olá, gostaria de contratar o plano *${planName}* do *${title}* por *R$ ${price.toFixed(2)}*.\n\n[_*URL*:www.softclever.com.br${location.pathname}_]`
+		const formattedPrice = formatPrice(price)
+		const message = `Olá, gostaria de contratar o plano *${planName}* do *${title}* por *R$ ${formattedPrice}*.\n\n[_*URL*:www.softclever.com.br${location.pathname}_]`
 		return `https://web.whatsapp.com/send?phone=5511992810249&text=${encodeURIComponent(message)}`
 	}
 
@@ -26,7 +32,7 @@ function Products({ title, mensal, anual, semestral }: ProductsProps) {
 					<h3 className="text-xl font-black text-second">Mensal</h3>
 					<p className="text-3xl text-third">
 						R$
-						<span className="pl-4 text-5xl font-bold text-second">{mensal.price}</span>
+						<span className="pl-4 text-5xl font-bold text-second">{formatPrice(mensal.price)}</span>
 					</p>
 					<p className="font-semibold text-second">(a partir de)</p>
 					<ul className="flex flex-col gap-4">
@@ -48,7 +54,7 @@ function Products({ title, mensal, anual, semestral }: ProductsProps) {
 					<h3 className="text-xl font-black text-white">Anual</h3>
 					<p className="text-3xl text-third">
 						R$
-						<span className="pl-4 text-5xl font-bold text-white">{anual.price}</span>
+						<span className="pl-4 text-5xl font-bold text-white">{formatPrice(anual.price)}</span>
 					</p>
 					<p className="font-semibold text-white">(a partir de)</p>
 					<ul className="flex flex-col gap-4">
@@ -70,7 +76,7 @@ function Products({ title, mensal, anual, semestral }: ProductsProps) {
 					<h3 className="text-xl font-black text-second">Semestral</h3>
 					<p className="text-3xl text-third">
 						R$
-						<span className="pl-4 text-5xl font-bold text-second">{semestral.price}</span>
+						<span className="pl-4 text-5xl font-bold text-second">{formatPrice(semestral.price)}</span>
 					</p>
 					<p className="font-semibold text-second">(a partir de)</p>
 					<ul className="flex flex-col gap-4">
