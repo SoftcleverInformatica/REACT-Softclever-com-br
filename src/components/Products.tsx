@@ -1,6 +1,24 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
-function Products() {
+interface Card {
+	price: number
+	items: string[]
+}
+
+interface ProductsProps {
+	title: string
+	mensal: Card
+	anual: Card
+	semestral: Card
+}
+
+function Products({ title, mensal, anual, semestral }: ProductsProps) {
+	const location = useLocation()
+	const createWhatsappLink = (planName: string, price: number) => {
+		const message = `Olá, gostaria de contratar o plano *${planName}* do *${title}* por *R$ ${price.toFixed(2)}*.\n\n[_*URL*:www.softclever.com.br${location.pathname}_]`
+		return `https://web.whatsapp.com/send?phone=5511992810249&text=${encodeURIComponent(message)}`
+	}
+
 	return (
 		<div className="item-center flex w-full max-w-lg flex-col justify-center gap-8 p-8 sm:py-16 lg:max-w-screen-lg lg:flex-row lg:gap-0 xl:px-0 ">
 			<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
@@ -8,39 +26,19 @@ function Products() {
 					<h3 className="text-xl font-black text-second">Mensal</h3>
 					<p className="text-3xl text-third">
 						R$
-						<span className="pl-4 text-5xl font-bold text-second">127,90</span>
+						<span className="pl-4 text-5xl font-bold text-second">{mensal.price}</span>
 					</p>
 					<p className="font-semibold text-second">(a partir de)</p>
 					<ul className="flex flex-col gap-4">
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Suporte online ilimitado</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Instalação remota inclusa</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Treinamento remoto incluso</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Sem fidelidade</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Mensalidade via Boleto</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Sem Desconto</p>
-						</li>
+						{mensal.items.map((item, index) => (
+							<li key={index} className="flex items-center gap-2">
+								<p className="text-third">+</p>
+								<p className="text-second">{item}</p>
+							</li>
+						))}
 					</ul>
 					<Link
-						to={
-							"https://web.whatsapp.com/send?phone=5511992810249&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20solicitar%20o%20plano%20mensal%20de%20R%24%20127%2C90%20que%20vi%20no%20site%20www.softclever.com."
-						}
+						to={createWhatsappLink("mensal", mensal.price)}
 						className="rounded border-2 border-third p-2 text-center text-third transition-all hover:border-second hover:text-sm hover:text-second hover:shadow-[0_10px_24px_rgba(0,0,0,0.3)]"
 					>
 						Contratar Plano
@@ -50,39 +48,19 @@ function Products() {
 					<h3 className="text-xl font-black text-white">Anual</h3>
 					<p className="text-3xl text-third">
 						R$
-						<span className="pl-4 text-5xl font-bold text-white">89,53</span>
+						<span className="pl-4 text-5xl font-bold text-white">{anual.price}</span>
 					</p>
 					<p className="font-semibold text-white">(a partir de)</p>
 					<ul className="flex flex-col gap-4">
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-white">Suporte online ilimitado</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-white">Instalação remota inclusa</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-white">Treinamento remoto incluso</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-white">Com fidelidade de 12 meses</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-white">A Vista ou Parcelado*</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-white">Desconto de até 30%*</p>
-						</li>
+						{anual.items.map((item, index) => (
+							<li key={index} className="flex items-center gap-2">
+								<p className="text-third">+</p>
+								<p className="text-white">{item}</p>
+							</li>
+						))}
 					</ul>
 					<Link
-						to={
-							"https://web.whatsapp.com/send?phone=5511992810249&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20solicitar%20o%20plano%20anual%20de%20R%24%2089%2C53%20que%20vi%20no%20site%20www.softclever.com."
-						}
+						to={createWhatsappLink("anual", anual.price)}
 						className="rounded border-2 border-white p-2 text-center text-white transition-all hover:text-sm"
 					>
 						Contratar Plano
@@ -92,39 +70,19 @@ function Products() {
 					<h3 className="text-xl font-black text-second">Semestral</h3>
 					<p className="text-3xl text-third">
 						R$
-						<span className="pl-4 text-5xl font-bold text-second">108,71</span>
+						<span className="pl-4 text-5xl font-bold text-second">{semestral.price}</span>
 					</p>
 					<p className="font-semibold text-second">(a partir de)</p>
 					<ul className="flex flex-col gap-4">
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Suporte online ilimitado</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Instalação remota inclusa</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Treinamento remoto incluso</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Com fidelidade de 6 meses</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">A Vista ou Parcelado*</p>
-						</li>
-						<li className="flex items-center gap-2">
-							<p className="text-third">+</p>
-							<p className="text-second">Desconto de até 15%*</p>
-						</li>
+						{semestral.items.map((item, index) => (
+							<li key={index} className="flex items-center gap-2">
+								<p className="text-third">+</p>
+								<p className="text-second">{item}</p>
+							</li>
+						))}
 					</ul>
 					<Link
-						to={
-							"https://web.whatsapp.com/send?phone=5511992810249&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20solicitar%20o%20plano%20semestral%20de%20R%24%20108%2C71%20que%20vi%20no%20site%20www.softclever.com."
-						}
+						to={createWhatsappLink("semestral", semestral.price)}
 						className="rounded border-2 border-third p-2 text-center text-third transition-all hover:border-second hover:text-sm hover:text-second hover:shadow-[0_10px_24px_rgba(0,0,0,0.3)]"
 					>
 						Contratar Plano

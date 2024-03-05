@@ -6,6 +6,7 @@ import "./index.css"
 import ASoftClever from "./pages/ASoftClever.tsx"
 import Clientes from "./pages/Clientes.tsx"
 import Contato from "./pages/Contato.tsx"
+import GestaoErp from "./pages/GestaoErp.tsx"
 import Home from "./pages/Home.tsx"
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade.tsx"
 import SatENfce from "./pages/SatENfce.tsx"
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
 	{
 		path: "/sat-e-nfc-e",
 		element: <SatENfce />,
+	},
+	{
+		path: "/gestao-erp",
+		element: <GestaoErp />,
 	},
 ])
 

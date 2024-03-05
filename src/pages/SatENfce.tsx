@@ -9,6 +9,8 @@ import VideosCarousel from "../components/VideosCarousel"
 import Whatsapp from "../components/Whatsapp"
 
 function SatENfce() {
+	const title = "S@T – NFC-E"
+
 	const videos = [
 		"https://www.youtube.com/watch?v=zTJhwfRWWjw",
 		"https://www.youtube.com/watch?v=T87FxxWCDJs",
@@ -21,11 +23,15 @@ function SatENfce() {
 	return (
 		<>
 			<Menu />
-			<Header title={"S@T – NFC-E"} subtitle="IDEAL PARA PEQUENOS E MÉDIOS COMÉRCIOS VAREJISTAS" />
+			<Header title={title} subtitle="IDEAL PARA PEQUENOS E MÉDIOS COMÉRCIOS VAREJISTAS" />
 			<main className="flex w-full flex-col items-center justify-center gap-8 ">
 				<div className="item-center flex w-full max-w-lg flex-col justify-center gap-8 p-8 sm:py-16 lg:max-w-screen-lg lg:flex-row lg:gap-0 xl:px-0 ">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%]">
+							<img
+								src="assets/images/jpg/sat.jpg"
+								alt="Um celular com enfeites de lojas e uma placa pendurada como se fosse em uma porta escrita 'open'"
+							/>
 							<h3 className="text-lg font-extrabold text-second sm:text-2xl">SOBRE O SÍRIUS S@T E SÍRIUS NFC-E</h3>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
 								Sistema de gestão completo, simples e prático, com tecnologia avançada, está em constante atualização, crescimento e com
@@ -103,7 +109,7 @@ function SatENfce() {
 						</div>
 						<div className="flex w-full flex-col gap-4 lg:max-w-[33%]">
 							<SupportWhatsapp />
-							<img src="src/assets/images/png/sat.png" alt="Varejista com avental vermelho" />
+							<img src="assets/images/png/sat.png" alt="Varejista com avental vermelho" />
 							<h3 className="w-full pt-4 font-bold text-third">SOFT CLEVER</h3>
 							<h2 className="w-full text-3xl font-black text-second">Nossas Soluções</h2>
 							<LateralNavBar />
@@ -113,7 +119,42 @@ function SatENfce() {
 
 				<VideosCarousel videos={videos} />
 
-				<Products />
+				<Products
+					title={title}
+					mensal={{
+						price: 127.9,
+						items: [
+							"Suporte online ilimitado",
+							"Instalação remota inclusa",
+							"Treinamento remoto incluso",
+							"Sem fidelidade",
+							"Mensalidade via Boleto",
+							"Sem Desconto",
+						],
+					}}
+					anual={{
+						price: 89.53,
+						items: [
+							"Suporte online ilimitado",
+							"Instalação remota inclusa",
+							"Treinamento remoto incluso",
+							"Com fidelidade de 12 meses",
+							"A Vista ou Parcelado*",
+							"Desconto de até 30%*",
+						],
+					}}
+					semestral={{
+						price: 108.71,
+						items: [
+							"Suporte online ilimitado",
+							"Instalação remota inclusa",
+							"Treinamento remoto incluso",
+							"Com fidelidade de 6 meses",
+							"A Vista ou Parcelado*",
+							"Desconto de até 15%*",
+						],
+					}}
+				/>
 			</main>
 			<Footer />
 			<Whatsapp />

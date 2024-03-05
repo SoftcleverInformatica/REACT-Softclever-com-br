@@ -41,9 +41,9 @@ function Suporte() {
 						</div>
 					</div>
 				</div>
-				<div className="item-center flex w-full flex-col justify-center gap-8 p-8 sm:p-16">
-					<h3 className="text-lg font-extrabold text-second sm:text-2xl">DOWNLOAD ACESSO REMOTO</h3>
-					<div className="flex flex-col items-center justify-between gap-8 lg:flex-row lg:gap-0">
+				<div className="flex w-full flex-col items-center justify-center gap-8 p-8 sm:p-16">
+					<h3 className="w-full max-w-screen-lg text-lg font-extrabold text-second sm:text-2xl">DOWNLOAD ACESSO REMOTO</h3>
+					<div className="flex w-full  max-w-screen-lg flex-col items-center justify-between gap-8 lg:flex-row lg:gap-0">
 						<div className="flex w-full flex-col items-center justify-center lg:w-[30%]">
 							<p className="w-full bg-background p-6 text-center text-base font-medium text-second">AMMY</p>
 							<Link
