@@ -113,7 +113,7 @@ function Menu() {
 			className="flex w-full justify-center bg-second px-2 lg:px-0"
 			isMenuOpen={isMenuOpen}
 			onMenuOpenChange={setIsMenuOpen}
-			position="static"
+			position="sticky"
 			isBordered
 			isBlurred={false}
 		>

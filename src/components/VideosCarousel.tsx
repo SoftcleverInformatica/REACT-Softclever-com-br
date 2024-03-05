@@ -69,53 +69,55 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 	}
 
 	return (
-		<div className="item-center flex w-full flex-col justify-center gap-2 bg-background p-8 sm:p-16">
-			<p className="text-ms font-bold text-third sm:text-sm">SOLUÇÕES</p>
-			<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Vídeos demonstrativos</h3>
-			<div className="relative w-full" onClick={handlePause}>
-				<div className="overflow-hidden rounded-md">
-					<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
-						{videos.map((video, index) => (
-							<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2 lg:w-1/3">
-								<div className="relative sm:px-4">
-									<iframe
-										src={getEmbedLink(video)} // Obtém o link de incorporação do YouTube
-										title={`YouTube Video ${index}`} // Título para acessibilidade
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" // Permissões
-										allowFullScreen // Habilita o modo de tela cheia
-										className="aspect-video h-full w-full rounded-md"
-									></iframe>
+		<div className="item-center flex w-full justify-center bg-background p-8 sm:p-16">
+			<div className="item-center flex w-full flex-col justify-center gap-2 bg-background lg:max-w-screen-lg">
+				<p className="text-ms font-bold text-third sm:text-sm">SOLUÇÕES</p>
+				<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Vídeos demonstrativos</h3>
+				<div className="relative w-full" onClick={handlePause}>
+					<div className="overflow-hidden rounded-md">
+						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
+							{videos.map((video, index) => (
+								<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2 lg:w-1/3">
+									<div className="relative sm:px-4">
+										<iframe
+											src={getEmbedLink(video)} // Obtém o link de incorporação do YouTube
+											title={`YouTube Video ${index}`} // Título para acessibilidade
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" // Permissões
+											allowFullScreen // Habilita o modo de tela cheia
+											className="aspect-video h-full w-full rounded-md"
+										></iframe>
+									</div>
 								</div>
-							</div>
+							))}
+						</div>
+					</div>
+					<div className="absolute bottom-[-16px] left-1/2 flex -translate-x-1/2 transform space-x-2">
+						{Array.from(Array(numDots), (_, index) => (
+							<button
+								key={index}
+								onClick={() => goToSlide(index)}
+								className={`h-2 w-2 rounded-full border-1 border-second transition-all hover:bg-second ${index === currentSlide ? "w-4 bg-second" : "bg-transparent"}`}
+							></button>
 						))}
 					</div>
-				</div>
-				<div className="absolute bottom-[-16px] left-1/2 flex -translate-x-1/2 transform space-x-2">
-					{Array.from(Array(numDots), (_, index) => (
-						<button
-							key={index}
-							onClick={() => goToSlide(index)}
-							className={`h-2 w-2 rounded-full border-1 border-second transition-all hover:bg-second ${index === currentSlide ? "w-4 bg-second" : "bg-transparent"}`}
-						></button>
-					))}
-				</div>
 
-				<button
-					className={`absolute left-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
-						currentSlide === 0 ? "hidden" : ""
-					}`}
-					onClick={prevSlide}
-				>
-					{"<"}
-				</button>
-				<button
-					className={`absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
-						currentSlide === numDots - 1 ? "hidden" : ""
-					}`}
-					onClick={nextSlide}
-				>
-					{">"}
-				</button>
+					<button
+						className={`absolute left-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
+							currentSlide === 0 ? "hidden" : ""
+						}`}
+						onClick={prevSlide}
+					>
+						{"<"}
+					</button>
+					<button
+						className={`absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
+							currentSlide === numDots - 1 ? "hidden" : ""
+						}`}
+						onClick={nextSlide}
+					>
+						{">"}
+					</button>
+				</div>
 			</div>
 		</div>
 	)

@@ -24,6 +24,9 @@ export default {
 				header: "url('assets/images/jpg/bg-header.jpg')",
 				support: "url('assets/images/jpg/women-support.jpg')",
 			},
+			boxShadow: {
+				product: "0 1px 4px rgb(0, 0, 0, 0.15)",
+			},
 		},
 	},
 	darkMode: "class",
