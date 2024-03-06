@@ -6,6 +6,7 @@ interface Items {
 function ItemsInSolution({ items }: { items: Items[] }) {
 	return (
 		<div className="flex w-full flex-col flex-wrap gap-4 lg:flex-row lg:gap-0">
+			<h3 className="text-lg font-extrabold text-second sm:text-2xl">CONHEÇA PARTE DOS RECURSOS DISPONÍVEIS</h3>
 			{items.map((item, index) => (
 				<div key={index} className="flex w-full flex-col gap-4 lg:max-w-[33%] lg:py-4 lg:pr-4">
 					<div className="flex w-full items-center justify-center">

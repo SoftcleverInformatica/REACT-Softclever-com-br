@@ -5,7 +5,7 @@ interface IHeader {
 
 function Header({ title, subtitle }: IHeader) {
 	return (
-		<div className="item-center flex w-full flex-col justify-center bg-header bg-cover bg-center p-16 lg:flex-row">
+		<div className="item-center flex w-full flex-col justify-center bg-second bg-header bg-cover bg-center p-16 lg:flex-row">
 			<div className="flex w-full sm:max-w-3xl lg:max-w-screen-lg">
 				<div className="flex w-full max-w-lg flex-col gap-4 self-center sm:max-w-3xl lg:max-w-[50%]">
 					<h1 className="w-full text-2xl font-extrabold text-white sm:text-4xl">{title.toUpperCase()}</h1>

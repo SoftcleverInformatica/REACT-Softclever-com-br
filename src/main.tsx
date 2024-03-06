@@ -10,6 +10,7 @@ import GestaoErp from "./pages/GestaoErp.tsx"
 import Home from "./pages/Home.tsx"
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade.tsx"
 import SatENfce from "./pages/SatENfce.tsx"
+import SolucoesFiscais from "./pages/SolucoesFiscais.tsx"
 import Suporte from "./pages/Suporte.tsx"
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 	{
 		path: "/gestao-erp",
 		element: <GestaoErp />,
+	},
+	{
+		path: "/solucoes-fiscais",
+		element: <SolucoesFiscais />,
 	},
 ])
 
