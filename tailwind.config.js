@@ -21,8 +21,8 @@ export default {
 				helvetica: "Helvetica, Arial, sans-serif",
 			},
 			backgroundImage: {
-				header: "url('assets/images/jpg/bg-header.jpg')",
-				support: "url('assets/images/jpg/women-support.jpg')",
+				header: "url('images/jpg/bg-header.jpg')",
+				support: "url('images/jpg/women-support.jpg')",
 			},
 			boxShadow: {
 				product: "0 1px 4px rgb(0, 0, 0, 0.15)",
