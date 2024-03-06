@@ -21,14 +21,14 @@ function Products({ title, mensal, anual, semestral }: ProductsProps) {
 
 	const createWhatsappLink = (planName: string, price: number) => {
 		const formattedPrice = formatPrice(price)
-		const message = `Olá, gostaria de contratar o plano *${planName}* do *${title}* por *R$ ${formattedPrice}*.\n\n[_*URL*:www.softclever.com.br${location.pathname}_]`
+		const message = `Olá, gostaria de contratar o plano *${planName}* do *${title}* por *R$ ${formattedPrice}*.\n\n[_*URL*: www.softclever.com.br${location.pathname}_]`
 		return `https://web.whatsapp.com/send?phone=5511992810249&text=${encodeURIComponent(message)}`
 	}
 
 	return (
 		<div className="item-center flex w-full max-w-lg flex-col justify-center gap-8 p-8 sm:py-16 lg:max-w-screen-lg lg:flex-row lg:gap-0 xl:px-0 ">
 			<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
-				<div className="shadow-product flex w-full flex-col items-stretch justify-between gap-8 rounded-lg p-12 lg:max-w-[32%]">
+				<div className="flex w-full flex-col items-stretch justify-between gap-8 rounded-lg p-12 shadow-product lg:max-w-[32%]">
 					<h3 className="text-xl font-black text-second">Mensal</h3>
 					<p className="text-3xl text-third">
 						R$
@@ -50,7 +50,7 @@ function Products({ title, mensal, anual, semestral }: ProductsProps) {
 						Contratar Plano
 					</Link>
 				</div>
-				<div className="shadow-product flex w-full flex-col items-stretch justify-between gap-8 rounded-lg bg-second p-12 lg:max-w-[32%]">
+				<div className="flex w-full flex-col items-stretch justify-between gap-8 rounded-lg bg-second p-12 shadow-product lg:max-w-[32%]">
 					<h3 className="text-xl font-black text-white">Anual</h3>
 					<p className="text-3xl text-third">
 						R$
@@ -72,7 +72,7 @@ function Products({ title, mensal, anual, semestral }: ProductsProps) {
 						Contratar Plano
 					</Link>
 				</div>
-				<div className="shadow-product flex w-full flex-col items-stretch justify-between gap-8 rounded-lg p-12 lg:max-w-[32%]">
+				<div className="flex w-full flex-col items-stretch justify-between gap-8 rounded-lg p-12 shadow-product lg:max-w-[32%]">
 					<h3 className="text-xl font-black text-second">Semestral</h3>
 					<p className="text-3xl text-third">
 						R$
