@@ -21,7 +21,7 @@ function Products({ title, mensal, anual, semestral }: ProductsProps) {
 
 	const createWhatsappLink = (planName: string, price: number) => {
 		const formattedPrice = formatPrice(price)
-		const message = `Olá, gostaria de contratar o plano *${planName}* do *${title}* por *R$ ${formattedPrice}*.\n\n[_*URL*: www.softclever.com.br${location.pathname}_] `
+		const message = `Olá, gostaria de contratar o plano *${planName}* do *${title}* por *R$ ${formattedPrice}*.\n\n[_*URL*:www.softclever.com.br${location.pathname}_]`
 		return `https://web.whatsapp.com/send?phone=5511992810249&text=${encodeURIComponent(message)}`
 	}
 

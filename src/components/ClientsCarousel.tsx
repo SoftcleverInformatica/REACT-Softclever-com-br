@@ -103,7 +103,7 @@ const ClientsCarousel: React.FC<ClientsCarouselProps> = ({ images }) => {
 
 // Função para converter o link do YouTube em um link de incorporação
 function getImageSrc(src: string): string {
-	return `src/assets/images/clients/${src}`
+	return `assets/images/clients/${src}`
 }
 
 export default ClientsCarousel

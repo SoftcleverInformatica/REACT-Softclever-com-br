@@ -40,7 +40,7 @@ function GestaoErp() {
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%]">
 							<img
-								src="src/assets/images/jpg/erp.jpg"
+								src="assets/images/jpg/erp.jpg"
 								alt="Uma empresária com um tablet e um notebook sobre alguns gráficos, ao centro, sobreposto, o nome Sírius ERP envolto de símbolos que remetem a eficiência, versatilidade e os retornos"
 							/>
 							<h3 className="text-lg font-extrabold text-second sm:text-2xl">SOBRE A GESTÃO ERP</h3>
@@ -120,7 +120,7 @@ function GestaoErp() {
 						</div>
 						<div className="flex w-full flex-col gap-4 lg:max-w-[33%]">
 							<SupportWhatsapp />
-							<img src="src/assets/images/png/erp.png" alt="Varejista com avental vermelho" />
+							<img src="assets/images/png/erp.png" alt="Varejista com avental vermelho" />
 							<h3 className="w-full pt-4 font-bold text-third">SOFT CLEVER</h3>
 							<h2 className="w-full text-3xl font-black text-second">Nossas Soluções</h2>
 							<LateralNavBar />
