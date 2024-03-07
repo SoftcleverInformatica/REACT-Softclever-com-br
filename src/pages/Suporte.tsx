@@ -7,14 +7,8 @@ import VideosCarousel from "../components/VideosCarousel"
 import Whatsapp from "../components/Whatsapp"
 
 function Suporte() {
-	const videos = [
-		"https://www.youtube.com/watch?v=zTJhwfRWWjw",
-		"https://www.youtube.com/watch?v=T87FxxWCDJs",
-		"https://www.youtube.com/watch?v=1kloOC4_z-M",
-		"https://www.youtube.com/watch?v=GeVMI39VYqM",
-		"https://www.youtube.com/watch?v=zTJhwfRWWjw",
-		"https://www.youtube.com/watch?v=T87FxxWCDJs",
-	]
+	const videos = ["https://www.youtube.com/watch?v=83Pxy3TwN2w", "https://www.youtube.com/watch?v=GwttGRBPf1M"]
+
 	return (
 		<>
 			<Menu />

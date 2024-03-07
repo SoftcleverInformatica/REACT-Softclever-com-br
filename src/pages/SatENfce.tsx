@@ -11,14 +11,7 @@ import Whatsapp from "../components/Whatsapp"
 function SatENfce() {
 	const title = "S@T – NFC-E"
 
-	const videos = [
-		"https://www.youtube.com/watch?v=zTJhwfRWWjw",
-		"https://www.youtube.com/watch?v=T87FxxWCDJs",
-		"https://www.youtube.com/watch?v=1kloOC4_z-M",
-		"https://www.youtube.com/watch?v=GeVMI39VYqM",
-		"https://www.youtube.com/watch?v=zTJhwfRWWjw",
-		"https://www.youtube.com/watch?v=T87FxxWCDJs",
-	]
+	const videos = ["https://www.youtube.com/watch?v=83Pxy3TwN2w", "https://www.youtube.com/watch?v=GwttGRBPf1M"]
 
 	return (
 		<>
@@ -122,36 +115,32 @@ function SatENfce() {
 				<Products
 					title={title}
 					mensal={{
-						price: 127.9,
 						items: [
 							"Suporte online ilimitado",
 							"Instalação remota inclusa",
 							"Treinamento remoto incluso",
 							"Sem fidelidade",
 							"Mensalidade via Boleto",
-							"Sem Desconto",
-						],
-					}}
-					anual={{
-						price: 89.53,
-						items: [
-							"Suporte online ilimitado",
-							"Instalação remota inclusa",
-							"Treinamento remoto incluso",
-							"Com fidelidade de 12 meses",
-							"A Vista ou Parcelado*",
-							"Desconto de até 30%*",
 						],
 					}}
 					semestral={{
-						price: 108.71,
 						items: [
 							"Suporte online ilimitado",
 							"Instalação remota inclusa",
 							"Treinamento remoto incluso",
 							"Com fidelidade de 6 meses",
 							"A Vista ou Parcelado*",
-							"Desconto de até 15%*",
+							"Desconto de até 12,5%*",
+						],
+					}}
+					anual={{
+						items: [
+							"Suporte online ilimitado",
+							"Instalação remota inclusa",
+							"Treinamento remoto incluso",
+							"Com fidelidade de 12 meses",
+							"A Vista ou Parcelado*",
+							"Desconto de até 25%*",
 						],
 					}}
 				/>

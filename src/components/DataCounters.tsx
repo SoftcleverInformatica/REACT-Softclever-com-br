@@ -23,13 +23,13 @@ const DataCounters = () => {
 							clearInterval(interval) // Para o intervalo quando o valor final for alcançado
 							return finalValue
 						} else {
-							return Math.round(newValue) // Arredonda o valor para conter valores decimais
+							return Math.round(newValue * 100) / 100 // Arredonda o valor para conter valores decimais
 						}
 					})
 				}, 16) // Intervalo de atualização em milissegundos
 
 				return () => clearInterval(interval) // Limpa o intervalo quando o componente é desmontado
-			}, [finalValue, increment, isVisible]) // Executa o efeito sempre que o valor final ou a visibilidade mudar
+			}, [finalValue, increment]) // Executa o efeito sempre que o valor final ou a visibilidade mudar
 
 			return currentValue
 		}
@@ -66,8 +66,8 @@ const DataCounters = () => {
 				<div className="flex flex-grow flex-col">
 					<p className="w-full font-bold text-second">{title.toUpperCase()}</p>
 					<p className="w-full font-bold text-third">
-						{ValueUpdater(value)}
-						<span className="font-bold text-second"></span>
+						{ValueUpdater(value).toFixed(0)}
+						<span className="font-bold text-third">+</span>
 					</p>
 				</div>
 			</div>
@@ -95,7 +95,7 @@ const DataCounters = () => {
 					title="PROJETOS"
 					value={1000}
 				/>
-				<DataCounter classNames="py-4 sm:pl-4" icon={<GrUserManager className="text-white" size={23} />} title="NOSSA EQUIPE" value={30} />
+				<DataCounter classNames="py-4 sm:pl-4" icon={<GrUserManager className="text-white" size={23} />} title="NOSSA EQUIPE" value={20} />
 			</div>
 		</>
 	)

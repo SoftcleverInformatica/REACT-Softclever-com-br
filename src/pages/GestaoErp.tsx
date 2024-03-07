@@ -11,25 +11,7 @@ import Whatsapp from "../components/Whatsapp"
 function GestaoErp() {
 	const title = "Gestão ERP"
 
-	const videos = [
-		"https://www.youtube.com/watch?v=T87FxxWCDJs",
-		"https://www.youtube.com/watch?v=ovNLlEp1hlU",
-		"https://www.youtube.com/watch?v=mtUxu_F-960",
-		"https://www.youtube.com/watch?v=wORgLqi4ZbI",
-		"https://www.youtube.com/watch?v=Pr8lcC9pM7s",
-		"https://www.youtube.com/watch?v=5fQoJMgGqC0",
-		"https://www.youtube.com/watch?v=3rX8Ilw1Lrw",
-		"https://www.youtube.com/watch?v=flk9FVOJXmE",
-		"https://www.youtube.com/watch?v=1fHV4Ob95bo",
-		"https://www.youtube.com/watch?v=DvmWzf_fIsw",
-		"https://www.youtube.com/watch?v=o3tCem0qfyg",
-		"https://www.youtube.com/watch?v=uSpSJZyyJCo",
-		"https://www.youtube.com/watch?v=Wrt-x3F1KvA",
-		"https://www.youtube.com/watch?v=xvS4Kdo_pbs",
-		"https://www.youtube.com/watch?v=NqIOoDPmuVc",
-		"https://www.youtube.com/watch?v=0_5mjoPIBeg",
-		"https://www.youtube.com/watch?v=l9nSJLuYhbU",
-	]
+	const videos = ["https://www.youtube.com/watch?v=83Pxy3TwN2w", "https://www.youtube.com/watch?v=GwttGRBPf1M"]
 
 	return (
 		<>
@@ -133,39 +115,35 @@ function GestaoErp() {
 				<Products
 					title={title}
 					mensal={{
-						price: 359.9,
 						items: [
 							"Suporte online ilimitado",
 							"Instalação remota inclusa",
 							"Treinamento remoto incluso",
 							"Sem fidelidade",
 							"Mensalidade via Boleto",
-							"Sem Desconto",
 							"Com taxa de implantação",
 						],
 					}}
-					anual={{
-						price: 251.53,
-						items: [
-							"Suporte online ilimitado",
-							"Instalação remota inclusa",
-							"Treinamento remoto incluso",
-							"Com fidelidade de 12 meses",
-							"A Vista ou Parcelado*",
-							"Desconto de até 30%*",
-							"Sem taxa de implantação",
-						],
-					}}
 					semestral={{
-						price: 305.91,
 						items: [
 							"Suporte online ilimitado",
 							"Instalação remota inclusa",
 							"Treinamento remoto incluso",
 							"Com fidelidade de 6 meses",
 							"A Vista ou Parcelado*",
-							"Desconto de até 15%*",
 							"Sem taxa de implantação",
+							"Desconto de até 12,5%*",
+						],
+					}}
+					anual={{
+						items: [
+							"Suporte online ilimitado",
+							"Instalação remota inclusa",
+							"Treinamento remoto incluso",
+							"Com fidelidade de 12 meses",
+							"A Vista ou Parcelado*",
+							"Sem taxa de implantação",
+							"Desconto de até 25%*",
 						],
 					}}
 				/>

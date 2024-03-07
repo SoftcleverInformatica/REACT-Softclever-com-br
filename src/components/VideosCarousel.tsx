@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState } from "react"
 
 interface VideosCarouselProps {
 	videos: string[] // Alterado para aceitar links do YouTube
@@ -10,13 +10,13 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 	const [autoPlay, setAutoPlay] = useState(true)
 	const [numDots, setNumDots] = useState(videos.length)
 
-	const nextSlide = () => {
+	const nextSlide = useCallback(() => {
 		if (currentSlide !== numDots - 1) {
 			setCurrentSlide((prevSlide) => prevSlide + 1)
 		} else {
 			setCurrentSlide(0)
 		}
-	}
+	}, [currentSlide, numDots])
 
 	const prevSlide = () => {
 		if (currentSlide !== 0) {
@@ -71,8 +71,6 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 	return (
 		<div className="item-center flex w-full justify-center bg-background p-8 sm:p-16">
 			<div className="item-center flex w-full flex-col justify-center gap-2 bg-background lg:max-w-screen-lg">
-				<p className="text-ms font-bold text-third sm:text-sm">SOLUÇÕES</p>
-				<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Vídeos demonstrativos</h3>
 				<div className="relative w-full" onClick={handlePause}>
 					<div className="overflow-hidden rounded-md">
 						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
@@ -85,6 +83,14 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" // Permissões
 											allowFullScreen // Habilita o modo de tela cheia
 											className="aspect-video h-full w-full rounded-md"
+											// Remova o listener de eventos quando o componente é desmontado
+											// para evitar vazamentos de memória
+											onLoad={(e) => {
+												const iframe = e.currentTarget
+												return () => {
+													iframe.contentWindow?.removeEventListener("scroll", handlePause)
+												}
+											}}
 										></iframe>
 									</div>
 								</div>

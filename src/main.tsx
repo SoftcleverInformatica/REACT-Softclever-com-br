@@ -11,6 +11,7 @@ import Home from "./pages/Home.tsx"
 import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade.tsx"
 import SatENfce from "./pages/SatENfce.tsx"
 import SolucoesFiscais from "./pages/SolucoesFiscais.tsx"
+import SpedEBlocoK from "./pages/SpedEBlocoK.tsx"
 import Suporte from "./pages/Suporte.tsx"
 
 const router = createBrowserRouter([
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
 	{
 		path: "/solucoes-fiscais",
 		element: <SolucoesFiscais />,
+	},
+	{
+		path: "/sped-e-bloco-k",
+		element: <SpedEBlocoK />,
 	},
 ])
 

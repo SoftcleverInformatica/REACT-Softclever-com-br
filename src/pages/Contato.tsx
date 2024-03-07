@@ -43,9 +43,10 @@ function Contato() {
 
 	const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target
+		const newValue = value.replace(/\D/g, "")
 		setFormValues({
 			...formValues,
-			[name]: value,
+			[name]: newValue,
 		})
 		// Remover mensagem de erro ao começar a digitar
 		setFormErrors({

@@ -5,13 +5,10 @@ import LateralNavBar from "../components/LateralNavBar"
 import Menu from "../components/Menu"
 import Products from "../components/Products"
 import SupportWhatsapp from "../components/SupportWhatsapp"
-import VideosCarousel from "../components/VideosCarousel"
 import Whatsapp from "../components/Whatsapp"
 
-function SolucoesFiscais() {
+function SpedEBlocoK() {
 	const title = "Soluções Fiscais"
-
-	const videos = ["https://www.youtube.com/watch?v=83Pxy3TwN2w", "https://www.youtube.com/watch?v=GwttGRBPf1M"]
 
 	return (
 		<>
@@ -22,36 +19,35 @@ function SolucoesFiscais() {
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%]">
 							<img
-								src="assets/images/jpg/solucoes-fiscais.jpg"
+								src="assets/images/jpg/sped.jpg"
 								alt="Uma empresária com um tablet e um notebook sobre alguns gráficos, ao centro, sobreposto, o nome Sírius ERP envolto de símbolos que remetem a eficiência, versatilidade e os retornos"
 							/>
-							<h3 className="text-lg font-extrabold text-second sm:text-2xl">SOBRE AS SOLUÇÕES FISCAIS</h3>
+							<h3 className="text-lg font-extrabold text-second sm:text-2xl">SOBRE O SPED E BLOCO K</h3>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
-								Sistema completo, simples e prático para emissão de qualquer tipo de documentos fiscais, tais como; Nota Fiscal Eletrônica
-								(NF-e), Conhecimento de Transporte Eletrônico (CT-e) e Manifestação de Documentos Fiscais (MDF-e). Atuando em todos os estados,
-								disponibilizamos as melhores funcionalidades para atender a qualquer tipo de empresa, seja comércio, distribuição, atacado e
-								indústria. Atende a qualquer segmento do mercado e empresas de micro, pequeno e médio porte.
+								Sistema completo que facilita os processos fiscais de qualquer empresa, seja comércio, indústria, distribuição ou atacado.
+								Atende a qualquer segmento do mercado. O Sírius Sped Fiscal e Bloco K está em constante atualização. Disponibilizamos as
+								melhores e mais avançadas tecnologias para atender de forma prática a qualquer tipo de empresa, seja de micro, pequeno e médio
+								porte.
 							</p>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
-								Sistema homologado na Secretaria da Fazenda, atende completamente a toda Legislação Fiscal exigida pela SEFAZ de forma eficaz e
-								totalmente simplificada.
+								Atende completamente a toda Legislação Fiscal exigida pela SEFAZ de forma eficaz e totalmente simplificada.
 							</p>
 							<ItemsInSolution
 								items={[
 									{
-										title: "Nota Fiscal Eletrônica",
+										title: "Sped Fiscal",
 										description:
-											"Emissão de Nota Fiscal Eletrônica (NF-e) com envio e autorização junto a SEFAZ. Rotinas de cancelamento e inutilização por faixa numérica, carta de correção, envio automático de e-mail com XML e PDF. Configurações de diversos tipos de operações com cálculo automático de impostos. Pré-visualização e impressão do DANFE e opções de relatórios fiscais.",
+											"Totalmente integrado com compras e vendas. Cálculo de impostos de entrada e saída. Captura do arquivo XML. Atribuição automática das CFOP´S de entrada e das CST´S de ICMS, IPI, PIS E COFINS. Geração mensal do arquivo Sped para envio a SEFAZ e contabilidade. Geração de livro fiscal para conferência com livro da contabilidade. Permite conversão das unidades de medidas (compra x venda) e rateio de impostos. Pode ser contratado separadamente de nosso ERP e integrado ao seu sistema. Você não precisa substituir todos os sistemas de sua empresa.",
 									},
 									{
-										title: "Conhecimento de Transporte Eletrônico",
+										title: "Bloco K",
 										description:
-											"Emissão de Conhecimento de Transporte Eletrônico (CT-e) com envio e autorização junto a SEFAZ. Diversos processos automatizados. Filtros e relatórios gerenciais. Cadastros de emitente, remetente, consignatário, redespacho, tomador, expedidor, recebedor e destinatário. Pré-visualização e impressão do Conhecimento de Transporte.",
+											"Totalmente integrado com as compras, estoque e produção. O Bloco K atua como um componente do Sped Fiscal para controle detalhado dos saldos de entrada e saída de produtos e insumos. Geração mensal do arquivo Bloco K 200 e/ou 280 para envio a SEFAZ e para a contabilidade com movimentações das compras, vendas e produção. Também controla os insumos. Controla estoque próprio e estoque em poder de terceiros. Pode ser contratado separadamente de nosso ERP e integrado ao seu sistema. Você não precisa substituir todos os sistemas de sua empresa.",
 									},
 									{
-										title: "Manifesto de Documentos Fiscais",
+										title: "Módulos Auxiliares",
 										description:
-											"Emissão de Manifestação de Documentos Fiscais com a finalidade de atender empresas prestadoras de serviço cujo transporte seja realizado em veículos próprios, arrendados, ou mediante a contratação de transportador autônomo de cargas, com mais de uma NF-e ou CT-e. A finalidade do MDF-e é agilizar o registro em lote de documentos fiscais em trânsito e identificar a unidade de carga utilizada e demais características do transporte.",
+											"Os módulos auxiliares ao Sped Fiscal e Bloco K são: Vendas, Compras e Produção. Estes módulos são fundamentais para geração dos arquivos. Os módulos contam com rotinas automáticas que minimizam processos manuais e possíveis erros que interferem no resultado final.",
 									},
 								]}
 							/>
@@ -65,8 +61,6 @@ function SolucoesFiscais() {
 						</div>
 					</div>
 				</div>
-
-				<VideosCarousel videos={videos} />
 
 				<Products
 					title="Soft Clever"
@@ -107,4 +101,4 @@ function SolucoesFiscais() {
 	)
 }
 
-export default SolucoesFiscais
+export default SpedEBlocoK

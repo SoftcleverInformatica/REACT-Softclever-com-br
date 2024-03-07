@@ -62,40 +62,42 @@ const ClientsCarousel: React.FC<ClientsCarouselProps> = ({ images }) => {
 	}
 
 	return (
-		<div className="item-center flex w-full flex-col justify-center gap-2 bg-background p-8 sm:p-16">
-			<p className="text-ms font-bold text-third sm:text-sm">SOLUÇÕES</p>
-			<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Vídeos demonstrativos</h3>
-			<div className="relative w-full" onClick={handlePause}>
-				<div className="overflow-hidden rounded-md">
-					<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
-						{images.map((image, index) => (
-							<div key={index} className="relative w-1/2 flex-none overflow-hidden lg:w-1/4">
-								<div className="relative px-4">
-									<img
-										src={getImageSrc(image)} // Obtém o link de incorporação do YouTube
-										className="aspect-video h-full w-full rounded-md"
-									></img>
+		<div className="item-center flex w-full flex-col items-center justify-center gap-2 bg-background p-8 sm:p-16">
+			<div className="flex w-full max-w-screen-lg flex-col justify-center">
+				<p className="text-ms font-bold text-third sm:text-sm">SOLUÇÕES</p>
+				<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Vídeos demonstrativos</h3>
+				<div className="relative w-full" onClick={handlePause}>
+					<div className="overflow-hidden rounded-md">
+						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
+							{images.map((image, index) => (
+								<div key={index} className="relative w-1/2 flex-none overflow-hidden lg:w-1/4">
+									<div className="relative px-4">
+										<img
+											src={getImageSrc(image)} // Obtém o link de incorporação do YouTube
+											className="aspect-video h-full w-full rounded-md"
+										></img>
+									</div>
 								</div>
-							</div>
-						))}
+							))}
+						</div>
 					</div>
+					<button
+						className={`absolute left-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
+							currentSlide === 0 ? "hidden" : ""
+						}`}
+						onClick={prevSlide}
+					>
+						{"<"}
+					</button>
+					<button
+						className={`absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
+							currentSlide === numDots - 1 ? "hidden" : ""
+						}`}
+						onClick={nextSlide}
+					>
+						{">"}
+					</button>
 				</div>
-				<button
-					className={`absolute left-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
-						currentSlide === 0 ? "hidden" : ""
-					}`}
-					onClick={prevSlide}
-				>
-					{"<"}
-				</button>
-				<button
-					className={`absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
-						currentSlide === numDots - 1 ? "hidden" : ""
-					}`}
-					onClick={nextSlide}
-				>
-					{">"}
-				</button>
 			</div>
 		</div>
 	)
