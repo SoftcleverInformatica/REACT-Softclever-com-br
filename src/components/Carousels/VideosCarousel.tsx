@@ -36,12 +36,9 @@ const VideosCarousel = ({ videos }: VideosCarouselProps) => {
 			if (windowWidth < 640) {
 				setNumDots(videos.length)
 				setTranslateX(currentSlide * 100)
-			} else if (windowWidth >= 640 && windowWidth < 1024) {
+			} else {
 				setNumDots(videos.length - 1)
 				setTranslateX(currentSlide * (100 / 2))
-			} else {
-				setNumDots(videos.length - 2)
-				setTranslateX(currentSlide * (100 / 3))
 			}
 		}
 
@@ -75,7 +72,7 @@ const VideosCarousel = ({ videos }: VideosCarouselProps) => {
 					<div className="overflow-hidden rounded-md">
 						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
 							{videos.map((video, index) => (
-								<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2 lg:w-1/3">
+								<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2">
 									<div className="relative sm:px-4">
 										<iframe
 											src={getEmbedLink(video)} // Obtém o link de incorporação do YouTube
