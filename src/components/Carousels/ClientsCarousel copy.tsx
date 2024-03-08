@@ -569,39 +569,6 @@ function ClientsCarousel() {
 			<div className="flex w-full max-w-screen-lg flex-col justify-center">
 				<p className="text-ms font-bold text-third sm:text-sm">SOLUÇÕES</p>
 				<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Vídeos demonstrativos</h3>
-				<div className="relative w-full px-8" onClick={handlePause}>
-					<div className="overflow-hidden rounded-md">
-						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
-							{reviews.map((review, index) => (
-								<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2">
-									<div className="relative flex w-full gap-4 px-4">
-										<img
-											src={getImageSrc(review.image)} // Obtém o link de incorporação do YouTube
-											className="aspect-square h-12 w-12 rounded-md"
-										></img>
-										<p>{review.name}</p>
-									</div>
-								</div>
-							))}
-						</div>
-					</div>
-					<button
-						className={`absolute left-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
-							currentSlide === 0 ? "hidden" : ""
-						}`}
-						onClick={prevSlide}
-					>
-						{"<"}
-					</button>
-					<button
-						className={`absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
-							currentSlide === numDots - 1 ? "hidden" : ""
-						}`}
-						onClick={nextSlide}
-					>
-						{">"}
-					</button>
-				</div>
 			</div>
 		</div>
 	)

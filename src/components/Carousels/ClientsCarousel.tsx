@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react"
+import { FaStar } from "react-icons/fa6"
 
 interface Reviews {
 	image: string
@@ -507,6 +508,11 @@ const reviews: Reviews[] = [
 	},
 ]
 
+function renderStars() {
+	// Create an array of the desired number of stars
+	return Array(5).fill(<FaStar className="text-black" size={15} />)
+}
+
 function ClientsCarousel() {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const [translateX, setTranslateX] = useState(0)
@@ -579,8 +585,9 @@ function ClientsCarousel() {
 											src={getImageSrc(review.image)} // Obtém o link de incorporação do YouTube
 											className="aspect-square h-12 w-12 rounded-md"
 										></img>
-										<div className="flex w-full flex-col gap-4">
+										<div className="flex w-full flex-col gap-2">
 											<p className="w-full text-xs font-bold text-[#3c4a54] sm:text-base">{review.name}</p>
+											{renderStars()}
 										</div>
 									</div>
 								</div>
