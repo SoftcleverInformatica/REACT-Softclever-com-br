@@ -574,12 +574,12 @@ function ClientsCarousel() {
 						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
 							{reviews.map((review, index) => (
 								<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2">
-									<div className="relative px-4">
-										<p>{review.name}</p>
+									<div className="relative flex w-full gap-4 px-4">
 										<img
 											src={getImageSrc(review.image)} // Obtém o link de incorporação do YouTube
 											className="aspect-square h-12 w-12 rounded-md"
 										></img>
+										<p>{review.name}</p>
 									</div>
 								</div>
 							))}
