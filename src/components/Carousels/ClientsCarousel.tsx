@@ -547,7 +547,7 @@ function ClientsCarousel() {
 			if (autoPlay) {
 				nextSlide()
 			}
-		}, 2000)
+		}, 5000)
 
 		window.addEventListener("resize", handleResize)
 
@@ -575,6 +575,7 @@ function ClientsCarousel() {
 							{reviews.map((review, index) => (
 								<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2">
 									<div className="relative px-4">
+										<p>{review.name}</p>
 										<img
 											src={getImageSrc(review.image)} // Obtém o link de incorporação do YouTube
 											className="aspect-square h-12 w-12 rounded-md"
