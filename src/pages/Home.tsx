@@ -92,6 +92,7 @@ function Home() {
 						<h2 className="w-full text-3xl font-black text-second">Segmentos atendidos</h2>
 						<div className="flex w-full lg:flex-row">
 							<div className="flex w-full flex-col gap-4 lg:max-w-[50%]">
+								<img src="" alt="" />
 								<h4 className="w-full font-bold text-second">A SOFT CLEVER</h4>
 								<p className="w-full text-3xl font-black text-third">SOLUÇÕES:</p>
 								<p className="w-full text-base font-medium text-[#3c4a54]">
