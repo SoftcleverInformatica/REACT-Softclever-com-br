@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 interface ClientsCarouselProps {
 	images: string[] // Alterado para aceitar links do YouTube
 }
 
-const ClientsCarousel: React.FC<ClientsCarouselProps> = ({ images }) => {
+const ClientsCarousel = ({ images }: ClientsCarouselProps) => {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const [translateX, setTranslateX] = useState(0)
 	const [autoPlay, setAutoPlay] = useState(true)
 	const [numDots, setNumDots] = useState(images.length)
 
-	const nextSlide = () => {
+	const nextSlide = useCallback(() => {
 		if (currentSlide !== numDots - 1) {
 			setCurrentSlide((prevSlide) => prevSlide + 1)
 		} else {
 			setCurrentSlide(0)
 		}
-	}
+	}, [currentSlide, numDots])
 
 	const prevSlide = () => {
 		if (currentSlide !== 0) {

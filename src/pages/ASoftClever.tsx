@@ -10,18 +10,20 @@ function ASoftClever() {
 			<Menu />
 			<Header title={"A Soft Clever"} subtitle="Nossos valores" />
 			<main className="flex w-full flex-col items-center justify-center gap-8 p-8 sm:p-16">
-				<div className="item-center flex w-full flex-col justify-center gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row lg:gap-0 ">
+				<div className="item-center flex w-full flex-col justify-center gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row lg:gap-0">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%] lg:flex-row">
 							<p className="w-full text-base font-medium text-[#3c4a54]">
-								Desde 1994 e milhares de clientes atendidos. Procurando atender cada vez melhor, o nosso segredo está no comprometimento com
-								nosso trabalho, pensando sempre no bem estar de nossos clientes com o compromisso de sempre resolver e orientar para melhor
-								decisão, gerando assim confiança e satisfação nos nossos atendimentos.
+								A Soft Clever tem uma trajetória sólida no desenvolvimento de sistemas desde 1994. Com mais de 12.000 usuários atendidos e
+								inúmeras parcerias estabelecidas com escritórios de contabilidade, nossa empresa está empenhada em oferecer um serviço cada vez
+								mais aprimorado. Nosso segredo reside no compromisso com a excelência, priorizando o bem-estar de nossos clientes e buscando
+								sempre orientá-los para as melhores decisões. Isso resulta em confiança e satisfação em cada interação com nossos serviços.
 							</p>
-							<p className="w-full text-base font-medium text-[#3c4a54] ">
-								Contando com uma equipe qualificada e laboratório próprio, atendemos todas as necessidades do mercado com agilidade e
-								comprometimento. A fidelidade de nossos clientes é a melhor demonstração de qualidade dos nossos serviços. Desenvolvemos
-								projetos específicos para todo tipo de empresas, seja ela micro, pequena ou de médio porte.
+							<p className="w-full text-base font-medium text-[#3c4a54]">
+								Contamos com uma equipe altamente qualificada e própria, capacitada para atender às diversas demandas do mercado com agilidade e
+								comprometimento. A fidelidade de nossos clientes é a maior prova da qualidade dos serviços que oferecemos. Desenvolvemos
+								projetos específicos para empresas de todos os tamanhos, desde microempreendimentos até médias empresas, adaptando-nos às
+								necessidades individuais de cada cliente.
 							</p>
 						</div>
 						<div className="flex w-full flex-col gap-8 lg:max-w-[33%]">
@@ -30,19 +32,6 @@ function ASoftClever() {
 								alt="2 Homens vestidos de terno e roupas sociais apertando a mão ao fechar um acordo bem sucedido"
 								className="w-full"
 							/>
-						</div>
-					</div>
-				</div>
-				<div className="item-center flex w-full flex-col justify-center gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row lg:gap-0 ">
-					<div className="flex w-full flex-col gap-8 lg:flex-row">
-						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[67%]">
-							<h3 className="w-full font-bold text-third">O QUE NÓS FAZEMOS</h3>
-							<h2 className="w-full text-3xl font-black text-second">Soluções</h2>
-							<p className="w-full text-base font-medium text-[#3c4a54] ">
-								Com mais de 25 anos de experiência, nossa equipe treinada esta apta a resolver em um curto prazo de tempo qualquer necessidade
-								dos nossos clientes com as melhores ferramentas do mercado de TI. Muito mais do que um cliente, tratamos a sua empresa como
-								membro do nosso grupo.
-							</p>
 						</div>
 					</div>
 				</div>

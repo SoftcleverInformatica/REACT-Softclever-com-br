@@ -1,5 +1,4 @@
-import ClientsCarousel from "../components/ClientsCarousel"
-import DataCounters from "../components/DataCounters"
+import ClientsCarousel from "../components/Carousels/ClientsCarousel"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
@@ -67,10 +66,16 @@ function Clientes() {
 	return (
 		<>
 			<Menu />
-			<Header title={"Suporte"} subtitle="Entre em contato" />
+			<Header title={"Nossos Clientes"} subtitle="PARCEIROS DE NEGÓCIOS" />
 			<ClientsCarousel images={images} />
-			<main className="flex w-full flex-col items-center justify-center gap-8 bg-background px-8 pb-8 sm:px-16 sm:pb-16">
-				<DataCounters />
+			<main className="flex w-full flex-col items-center justify-center gap-8">
+				<div className="item-center flex w-full flex-col justify-center gap-8 bg-background p-8 sm:p-16 lg:flex-row lg:gap-0">
+					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
+						<p className="text-white">
+							Nós da Soft Clever temos o intuito de ter sua empresa como membro do nosso grupo e não somente como mais um cliente.
+						</p>
+					</div>
+				</div>
 			</main>
 			<Footer />
 			<Whatsapp />

@@ -27,7 +27,7 @@ interface SvgProps {
 	[key: string]: unknown // Propriedades adicionais
 }
 
-const ChevronDown: React.FC<SvgProps> = ({ fill, size, height, width, ...props }) => {
+const ChevronDown = ({ fill, size, height, width, ...props }: SvgProps) => {
 	return (
 		<svg
 			fill="none"
@@ -68,7 +68,7 @@ function Menu() {
 		{ key: "sped-e-bloco-k", label: "SPED E BLOCO K" },
 	]
 
-	const SolutionsDropdown: React.FC = () => {
+	const SolutionsDropdown = () => {
 		const icons = {
 			chevron: <ChevronDown fill="currentColor" size={16} />,
 		}

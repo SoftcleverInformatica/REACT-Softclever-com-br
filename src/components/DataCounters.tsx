@@ -29,7 +29,8 @@ const DataCounters = () => {
 				}, 16) // Intervalo de atualização em milissegundos
 
 				return () => clearInterval(interval) // Limpa o intervalo quando o componente é desmontado
-			}, [finalValue, increment]) // Executa o efeito sempre que o valor final ou a visibilidade mudar
+				// eslint-disable-next-line react-hooks/exhaustive-deps
+			}, [finalValue, increment, isVisible]) // Executa o efeito sempre que o valor final ou a visibilidade mudar
 
 			return currentValue
 		}
@@ -49,13 +50,15 @@ const DataCounters = () => {
 				})
 			}, options)
 
-			if (dataCounterRef.current) {
-				observer.observe(dataCounterRef.current)
+			const currentRef = dataCounterRef.current // Armazena a referência atual em uma variável local
+
+			if (currentRef) {
+				observer.observe(currentRef)
 			}
 
 			return () => {
-				if (dataCounterRef.current) {
-					observer.unobserve(dataCounterRef.current) // Para de observar quando o componente for desmontado
+				if (currentRef) {
+					observer.unobserve(currentRef) // Para de observar quando o componente for desmontado
 				}
 			}
 		}, [])
@@ -76,9 +79,9 @@ const DataCounters = () => {
 
 	return (
 		<>
-			<div className="flex w-full flex-wrap sm:max-w-3xl lg:max-w-screen-lg ">
+			<div className="flex w-full flex-wrap sm:max-w-3xl lg:max-w-screen-lg">
 				<DataCounter
-					classNames="py-4 sm:pr-4 sm:border-r-1 border-[#bcced8] "
+					classNames="py-4 sm:pr-4 sm:border-r-1 border-[#bcced8]"
 					icon={<FaRegUser className="text-white" size={20} />}
 					title="USUÁRIOS"
 					value={12000}

@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 interface VideosCarouselProps {
 	videos: string[] // Alterado para aceitar links do YouTube
 }
 
-const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
+const VideosCarousel = ({ videos }: VideosCarouselProps) => {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const [translateX, setTranslateX] = useState(0)
 	const [autoPlay, setAutoPlay] = useState(true)
@@ -70,7 +70,7 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 
 	return (
 		<div className="item-center flex w-full justify-center bg-background p-8 sm:p-16">
-			<div className="item-center flex w-full flex-col justify-center gap-2 bg-background lg:max-w-screen-lg">
+			<div className="item-center flex w-full flex-col justify-center gap-2 lg:max-w-screen-lg">
 				<div className="relative w-full" onClick={handlePause}>
 					<div className="overflow-hidden rounded-md">
 						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
@@ -83,14 +83,6 @@ const VideosCarousel: React.FC<VideosCarouselProps> = ({ videos }) => {
 											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" // Permissões
 											allowFullScreen // Habilita o modo de tela cheia
 											className="aspect-video h-full w-full rounded-md"
-											// Remova o listener de eventos quando o componente é desmontado
-											// para evitar vazamentos de memória
-											onLoad={(e) => {
-												const iframe = e.currentTarget
-												return () => {
-													iframe.contentWindow?.removeEventListener("scroll", handlePause)
-												}
-											}}
 										></iframe>
 									</div>
 								</div>

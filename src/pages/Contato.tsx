@@ -95,8 +95,8 @@ function Contato() {
 		<>
 			<Menu />
 			<Header title={"Contato"} subtitle="Entre em contato" />
-			<main className="flex w-full flex-col items-center justify-center gap-8 ">
-				<div className="item-center flex w-full flex-col justify-center gap-8 p-8 sm:p-16 lg:flex-row lg:gap-0 ">
+			<main className="flex w-full flex-col items-center justify-center gap-8">
+				<div className="item-center flex w-full flex-col justify-center gap-8 p-8 sm:p-16 lg:flex-row lg:gap-0">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl sm:flex-row lg:max-w-screen-lg">
 						<div className="flex w-full flex-col gap-8 self-center sm:max-w-[33%]">
 							<div className="w-full border-b-1 border-[#bcced8] pb-8">

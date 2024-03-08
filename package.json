@@ -1,5 +1,7 @@
 {
 	"name": "softclever.com.br",
+	"author": "Gabriel Toth Gonçalves <gabrieltoth11@hotmail.com>",
+	"homepage": "https://github.com/GabrielToth",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
