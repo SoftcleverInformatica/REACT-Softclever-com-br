@@ -585,9 +585,12 @@ function ClientsCarousel() {
 											src={getImageSrc(review.image)} // Obtém o link de incorporação do YouTube
 											className="aspect-square h-12 w-12 rounded-md"
 										></img>
-										<div className="flex w-full flex-col gap-2">
-											<p className="w-full text-xs font-bold text-[#3c4a54] sm:text-base">{review.name}</p>
-											<div className="flex gap-1">{renderStars()}</div>
+										<div className="flex w-full flex-col gap-1">
+											<p className="w-full text-xs font-bold text-[#3c4a54] sm:text-sm md:text-base">{review.name}</p>
+											<div className="flex flex-wrap items-center gap-1 lg:flex-nowrap">
+												{renderStars()}
+												<span className="w-fit text-xs font-bold text-[#3c4a54] sm:text-sm md:text-base">{review.date}</span>
+											</div>
 										</div>
 									</div>
 								</div>
