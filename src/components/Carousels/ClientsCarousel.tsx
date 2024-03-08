@@ -561,7 +561,7 @@ function ClientsCarousel() {
 			clearInterval(interval)
 			window.removeEventListener("resize", handleResize)
 		}
-	}, [currentSlide, autoPlay, reviews, nextSlide])
+	}, [currentSlide, autoPlay, nextSlide])
 
 	const handlePause = () => {
 		setAutoPlay(false)
@@ -587,7 +587,7 @@ function ClientsCarousel() {
 										></img>
 										<div className="flex w-full flex-col gap-2">
 											<p className="w-full text-xs font-bold text-[#3c4a54] sm:text-base">{review.name}</p>
-											{renderStars()}
+											<div className="flex gap-1">{renderStars()}</div>
 										</div>
 									</div>
 								</div>

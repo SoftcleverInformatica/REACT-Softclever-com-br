@@ -521,14 +521,6 @@ function ClientsCarousel() {
 		}
 	}, [currentSlide, numDots])
 
-	const prevSlide = () => {
-		if (currentSlide !== 0) {
-			setCurrentSlide((prevSlide) => prevSlide - 1)
-		} else {
-			setCurrentSlide(numDots - 1)
-		}
-	}
-
 	useEffect(() => {
 		const handleResize = () => {
 			const windowWidth = window.innerWidth
@@ -557,13 +549,6 @@ function ClientsCarousel() {
 		}
 	}, [currentSlide, autoPlay, reviews, nextSlide])
 
-	const handlePause = () => {
-		setAutoPlay(false)
-		setTimeout(() => {
-			setAutoPlay(true)
-		}, 15000)
-	}
-
 	return (
 		<div className="item-center flex w-full flex-col items-center justify-center gap-2 bg-background p-8 sm:p-16">
 			<div className="flex w-full max-w-screen-lg flex-col justify-center">
@@ -572,11 +557,6 @@ function ClientsCarousel() {
 			</div>
 		</div>
 	)
-}
-
-// Função para converter o link do YouTube em um link de incorporação
-function getImageSrc(src: string): string {
-	return `assets/images/reviews/${src}`
 }
 
 export default ClientsCarousel
