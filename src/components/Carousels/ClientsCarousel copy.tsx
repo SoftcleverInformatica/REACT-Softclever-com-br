@@ -579,9 +579,7 @@ function ClientsCarousel() {
 											src={getImageSrc(review.image)} // Obtém o link de incorporação do YouTube
 											className="aspect-square h-12 w-12 rounded-md"
 										></img>
-										<div className="flex w-full flex-col gap-4">
-											<p className="w-full text-xs font-bold text-[#3c4a54] sm:text-base">{review.name}</p>
-										</div>
+										<p>{review.name}</p>
 									</div>
 								</div>
 							))}
