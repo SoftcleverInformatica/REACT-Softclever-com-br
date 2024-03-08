@@ -20,7 +20,7 @@ function Products({ title, mensal, anual, semestral }: ProductsProps) {
 	}
 
 	return (
-		<div className="item-center flex w-full max-w-lg flex-col justify-center gap-8 p-8 sm:py-16 lg:max-w-screen-lg lg:flex-row lg:gap-0 xl:px-0 ">
+		<div className="item-center flex w-full max-w-lg flex-col justify-center gap-8 p-8 sm:py-16 lg:max-w-screen-lg lg:flex-row lg:gap-0 xl:px-0">
 			<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg">
 				<h3 className="w-full pb-6 text-2xl font-bold text-second sm:text-3xl">Nossas modalidades de contratação.</h3>
 				<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">

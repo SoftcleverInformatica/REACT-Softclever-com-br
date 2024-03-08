@@ -1,3 +1,4 @@
+import VideosCarousel from "../components/Carousels/VideosCarousel"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import ItemsInSolution from "../components/ItemsInSolution"
@@ -5,7 +6,6 @@ import LateralNavBar from "../components/LateralNavBar"
 import Menu from "../components/Menu"
 import Products from "../components/Products"
 import SupportWhatsapp from "../components/SupportWhatsapp"
-import VideosCarousel from "../components/VideosCarousel"
 import Whatsapp from "../components/Whatsapp"
 
 function SatENfce() {
@@ -17,8 +17,8 @@ function SatENfce() {
 		<>
 			<Menu />
 			<Header title={title} subtitle="IDEAL PARA PEQUENOS E MÉDIOS COMÉRCIOS VAREJISTAS" />
-			<main className="flex w-full flex-col items-center justify-center gap-8 ">
-				<div className="item-center flex w-full max-w-lg flex-col justify-center gap-8 p-8 sm:py-16 lg:max-w-screen-lg lg:flex-row lg:gap-0 xl:px-0 ">
+			<main className="flex w-full flex-col items-center justify-center gap-8">
+				<div className="item-center flex w-full max-w-lg flex-col justify-center gap-8 p-8 sm:py-16 lg:max-w-screen-lg lg:flex-row lg:gap-0 xl:px-0">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%]">
 							<img
@@ -31,7 +31,7 @@ function SatENfce() {
 								milhares de Comércios atendidos. Atuando em todos os estados, disponibilizamos as melhores funcionalidades para atender a
 								qualquer tipo de Comércio com vendas em atacado, varejo e serviços.
 							</p>
-							<p className="w-full text-base font-medium text-[#3c4a54] ">
+							<p className="w-full text-base font-medium text-[#3c4a54]">
 								Sistema homologado na Secretaria da Fazenda, atende completamente a toda Legislação Fiscal exigida pela SEFAZ de forma eficaz e
 								totalmente simplificada.
 							</p>
