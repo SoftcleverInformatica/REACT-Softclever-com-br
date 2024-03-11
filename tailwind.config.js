@@ -21,7 +21,7 @@ export default {
 				helvetica: "Helvetica, Arial, sans-serif",
 			},
 			backgroundImage: {
-				header: "url('assets/images/jpg/bg-header.jpg')",
+				header: "url('images/jpg/bg-header.jpg')",
 				support: "url('images/jpg/women-support.jpg')",
 				home: "url('images/jpg/bg-home.jpg')",
 			},
