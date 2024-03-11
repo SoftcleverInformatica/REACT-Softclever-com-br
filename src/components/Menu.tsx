@@ -121,7 +121,7 @@ function Menu() {
 			<NavbarContent>
 				<NavbarBrand className="aspect-[172/48] h-12">
 					<Link className="aspect-[172/48] h-12" to={"/"}>
-						<Image className="aspect-[172/48] h-12 rounded-none" src="assets/images/png/softclever-logo.png" />
+						<Image className="aspect-[172/48] h-12 rounded-none" src="images/png/softclever-logo.png" />
 					</Link>
 				</NavbarBrand>
 			</NavbarContent>

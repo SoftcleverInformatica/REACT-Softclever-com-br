@@ -137,7 +137,7 @@ const HomeCarousel = () => {
 
 // Função para obter a URL da imagem
 function getImageSrc(src: string): string {
-	return `assets/images/png/${src}`
+	return `images/png/${src}`
 }
 
 export default HomeCarousel

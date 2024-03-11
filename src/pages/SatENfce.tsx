@@ -22,7 +22,7 @@ function SatENfce() {
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%]">
 							<img
-								src="assets/images/jpg/sat.jpg"
+								src="images/jpg/sat.jpg"
 								alt="Um celular com enfeites de lojas e uma placa pendurada como se fosse em uma porta escrita 'open'"
 							/>
 							<h3 className="text-lg font-extrabold text-second sm:text-2xl">SOBRE O SÍRIUS S@T E SÍRIUS NFC-E</h3>
@@ -102,7 +102,7 @@ function SatENfce() {
 						</div>
 						<div className="flex w-full flex-col gap-4 lg:max-w-[33%]">
 							<SupportWhatsapp />
-							<img src="assets/images/png/sat.png" alt="Varejista com avental vermelho" />
+							<img src="images/png/sat.png" alt="Varejista com avental vermelho" />
 							<h3 className="w-full pt-4 font-bold text-third">SOFT CLEVER</h3>
 							<h2 className="w-full text-3xl font-black text-second">Nossas Soluções</h2>
 							<LateralNavBar />

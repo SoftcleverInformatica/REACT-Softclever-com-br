@@ -574,10 +574,13 @@ function ClientsCarousel() {
 			<div className="flex w-full max-w-screen-lg flex-col justify-center">
 				<div className="relative w-full sm:px-8" onClick={handlePause}>
 					<div className="overflow-hidden rounded-md">
-						<div className="flex gap-[2%]" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
+						<div className="flex gap-[2%] " style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
 							{reviews.map((review, index) => (
-								<div key={`review-${index}`} className="relative w-full flex-none overflow-hidden rounded-lg bg-background sm:w-[49%]">
-									<div key={`review-content-${index}`} className="relative flex w-full gap-4 p-4">
+								<div
+									key={`review-${index}`}
+									className="h- relative min-h-full w-full flex-none overflow-hidden rounded-lg bg-background p-4 sm:w-[49%]"
+								>
+									<div key={`review-content-${index}`} className="relative flex w-full gap-4">
 										<img
 											src={getImageSrc(review.image)} // Obtém o link de incorporação do YouTube
 											key={`review-image-${index}`}
@@ -598,7 +601,7 @@ function ClientsCarousel() {
 											</div>
 										</div>
 									</div>
-									<div key={`review-text-${index}`} className="w-full px-4 pt-4">
+									<div key={`review-text-${index}`} className="w-full pt-4">
 										{review.showFullComment ? review.message : review.message.slice(0, 120)}
 										{review.message.length > 120 && !review.showFullComment ? "... " : " "}
 										{review.message.length > 120 && (
@@ -643,7 +646,7 @@ function ClientsCarousel() {
 
 // Função para converter o link do YouTube em um link de incorporação
 function getImageSrc(src: string): string {
-	return `assets/images/reviews/${src}`
+	return `images/reviews/${src}`
 }
 
 export default ClientsCarousel

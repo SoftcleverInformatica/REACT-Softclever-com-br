@@ -28,7 +28,7 @@ function ASoftClever() {
 						</div>
 						<div className="flex w-full flex-col gap-8 lg:max-w-[33%]">
 							<img
-								src="assets/images/jpg/a-soft-clever.jpg"
+								src="images/jpg/a-soft-clever.jpg"
 								alt="2 Homens vestidos de terno e roupas sociais apertando a mão ao fechar um acordo bem sucedido"
 								className="w-full"
 							/>
