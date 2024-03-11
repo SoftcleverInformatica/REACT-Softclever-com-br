@@ -1,3 +1,4 @@
+import ClientsCarousel from "../components/Carousels/ClientsCarousel"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
@@ -28,7 +29,7 @@ function Clientes() {
 						/>
 					</div>
 				</div>
-				<div className="item-center flex w-full flex-col justify-center gap-8 p-8 sm:p-16"></div>
+				<ClientsCarousel />
 			</main>
 			<Footer />
 			<Whatsapp />
