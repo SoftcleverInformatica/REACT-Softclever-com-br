@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react"
+import { FaStar } from "react-icons/fa6"
 
 interface Reviews {
 	image: string
@@ -507,6 +508,11 @@ const reviews: Reviews[] = [
 	},
 ]
 
+function renderStars() {
+	// Create an array of the desired number of stars
+	return Array(5).fill(<FaStar className="text-black" size={15} />)
+}
+
 function ClientsCarousel() {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const [translateX, setTranslateX] = useState(0)
@@ -555,7 +561,7 @@ function ClientsCarousel() {
 			clearInterval(interval)
 			window.removeEventListener("resize", handleResize)
 		}
-	}, [currentSlide, autoPlay, reviews, nextSlide])
+	}, [currentSlide, autoPlay, nextSlide])
 
 	const handlePause = () => {
 		setAutoPlay(false)
@@ -569,24 +575,30 @@ function ClientsCarousel() {
 			<div className="flex w-full max-w-screen-lg flex-col justify-center">
 				<p className="text-ms font-bold text-third sm:text-sm">SOLUÇÕES</p>
 				<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Vídeos demonstrativos</h3>
-				<div className="relative w-full px-8" onClick={handlePause}>
+				<div className="relative w-full sm:px-8" onClick={handlePause}>
 					<div className="overflow-hidden rounded-md">
 						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
 							{reviews.map((review, index) => (
 								<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2">
-									<div className="relative px-4">
-										<p>{review.name}</p>
+									<div className="relative flex w-full gap-4 px-4">
 										<img
 											src={getImageSrc(review.image)} // Obtém o link de incorporação do YouTube
 											className="aspect-square h-12 w-12 rounded-md"
 										></img>
+										<div className="flex w-full flex-col gap-1">
+											<p className="w-full text-xs font-bold text-[#3c4a54] sm:text-sm md:text-base">{review.name}</p>
+											<div className="flex flex-wrap items-center gap-1 lg:flex-nowrap">
+												{renderStars()}
+												<span className="w-fit text-xs font-bold text-[#3c4a54] sm:text-sm md:text-base">{review.date}</span>
+											</div>
+										</div>
 									</div>
 								</div>
 							))}
 						</div>
 					</div>
 					<button
-						className={`absolute left-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
+						className={`absolute left-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-transparent font-black text-second sm:bg-second sm:text-white ${
 							currentSlide === 0 ? "hidden" : ""
 						}`}
 						onClick={prevSlide}
@@ -594,7 +606,7 @@ function ClientsCarousel() {
 						{"<"}
 					</button>
 					<button
-						className={`absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-second font-black text-white ${
+						className={`absolute right-0 top-1/2 flex h-8 w-8 -translate-y-1/2 transform items-center justify-center rounded-full bg-transparent font-black text-second sm:bg-second sm:text-white ${
 							currentSlide === numDots - 1 ? "hidden" : ""
 						}`}
 						onClick={nextSlide}
