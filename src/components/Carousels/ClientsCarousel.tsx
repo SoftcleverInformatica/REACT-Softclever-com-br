@@ -539,10 +539,10 @@ function ClientsCarousel() {
 			const windowWidth = window.innerWidth
 			if (windowWidth < 640) {
 				setNumDots(reviews.length - 1)
-				setTranslateX(currentSlide * 100)
+				setTranslateX(currentSlide * 102)
 			} else {
 				setNumDots(reviews.length - 2)
-				setTranslateX(currentSlide * (100 / 2))
+				setTranslateX(currentSlide * (102 / 2))
 			}
 		}
 
@@ -570,36 +570,40 @@ function ClientsCarousel() {
 	}
 
 	return (
-		<div className="item-center flex w-full flex-col items-center justify-center gap-2 bg-background p-8">
+		<div className="item-center flex w-full flex-col items-center justify-center gap-2 p-8">
 			<div className="flex w-full max-w-screen-lg flex-col justify-center">
 				<div className="relative w-full sm:px-8" onClick={handlePause}>
 					<div className="overflow-hidden rounded-md">
-						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
+						<div className="flex gap-[2%]" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
 							{reviews.map((review, index) => (
-								<div key={index} className="relative w-full flex-none overflow-hidden sm:w-1/2">
-									<div key={index} className="relative flex w-full gap-4 px-4">
+								<div key={`review-${index}`} className="relative w-full flex-none overflow-hidden rounded-lg bg-background sm:w-[49%]">
+									<div key={`review-content-${index}`} className="relative flex w-full gap-4 p-4">
 										<img
 											src={getImageSrc(review.image)} // Obtém o link de incorporação do YouTube
-											key={index}
+											key={`review-image-${index}`}
 											className="aspect-square h-12 w-12 rounded-md"
-										></img>
-										<div key={index} className="flex w-full flex-col gap-2 sm:gap-1 lg:gap-2">
-											<p key={index} className="w-full text-xs font-bold text-[#3c4a54] sm:text-sm">
+										/>
+										<div key={`review-info-${index}`} className="flex w-full flex-col gap-2 sm:gap-1 lg:gap-2">
+											<p key={`review-name-${index}`} className="w-full text-xs font-bold text-[#3c4a54] sm:text-sm">
 												{review.name}
 											</p>
-											<div key={index} className="flex flex-wrap items-end gap-1 lg:flex-nowrap">
+											<div key={`review-details-${index}`} className="flex flex-wrap items-end gap-1 lg:flex-nowrap">
 												{renderStars()}
-												<span key={index} className="h-[18px] w-fit align-bottom text-xs font-bold text-[#3c4a54] sm:text-sm">
+												<span
+													key={`review-date-${index}`}
+													className="h-[18px] w-fit align-bottom text-xs font-bold text-[#3c4a54] sm:text-sm"
+												>
 													{review.date}
 												</span>
 											</div>
 										</div>
 									</div>
-									<div key={index} className="w-full px-4 pt-4">
+									<div key={`review-text-${index}`} className="w-full px-4 pt-4">
 										{review.showFullComment ? review.message : review.message.slice(0, 120)}
 										{review.message.length > 120 && !review.showFullComment ? "... " : " "}
 										{review.message.length > 120 && (
 											<span
+												key={`review-toggle-${index}`}
 												className="cursor-pointer text-third underline"
 												onClick={() => {
 													const updatedReviews = [...reviews]

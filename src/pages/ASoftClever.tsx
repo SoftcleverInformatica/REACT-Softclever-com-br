@@ -9,7 +9,7 @@ function ASoftClever() {
 		<>
 			<Menu />
 			<Header title={"A Soft Clever"} subtitle="Nossos valores" />
-			<main className="flex w-full flex-col items-center justify-center gap-8 p-8 sm:p-16">
+			<main className="flex w-full flex-col items-center justify-center p-8">
 				<div className="item-center flex w-full flex-col justify-center gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row lg:gap-0">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%] lg:flex-row">
