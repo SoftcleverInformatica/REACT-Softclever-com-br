@@ -22,7 +22,7 @@ function SatENfce() {
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%]">
 							<img
-								src="images/jpg/sat.jpg"
+								src="images/jpg/cell.jpg"
 								alt="Um celular com enfeites de lojas e uma placa pendurada como se fosse em uma porta escrita 'open'"
 							/>
 							<h3 className="text-lg font-extrabold text-second sm:text-2xl">SOBRE O SÍRIUS S@T E SÍRIUS NFC-E</h3>
