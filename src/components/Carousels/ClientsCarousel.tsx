@@ -570,10 +570,8 @@ function ClientsCarousel() {
 	}
 
 	return (
-		<div className="item-center flex w-full flex-col items-center justify-center gap-2 bg-background p-8 sm:p-16">
+		<div className="item-center flex w-full flex-col items-center justify-center gap-2 bg-background p-8">
 			<div className="flex w-full max-w-screen-lg flex-col justify-center">
-				<p className="text-ms font-bold text-third sm:text-sm">SOLUÇÕES</p>
-				<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Vídeos demonstrativos</h3>
 				<div className="relative w-full sm:px-8" onClick={handlePause}>
 					<div className="overflow-hidden rounded-md">
 						<div className="flex" style={{ transform: `translateX(-${translateX}%)`, transition: "transform 0.5s" }}>
@@ -585,16 +583,13 @@ function ClientsCarousel() {
 											key={index}
 											className="aspect-square h-12 w-12 rounded-md"
 										></img>
-										<div key={index} className="flex w-full flex-col gap-2">
-											<p key={index} className="w-full text-xs font-bold text-[#3c4a54] sm:text-sm md:text-base">
+										<div key={index} className="flex w-full flex-col gap-2 sm:gap-1 lg:gap-2">
+											<p key={index} className="w-full text-xs font-bold text-[#3c4a54] sm:text-sm">
 												{review.name}
 											</p>
 											<div key={index} className="flex flex-wrap items-end gap-1 lg:flex-nowrap">
 												{renderStars()}
-												<span
-													key={index}
-													className="h-[18px] w-fit align-bottom text-xs font-bold text-[#3c4a54] sm:text-sm md:text-base"
-												>
+												<span key={index} className="h-[18px] w-fit align-bottom text-xs font-bold text-[#3c4a54] sm:text-sm">
 													{review.date}
 												</span>
 											</div>
