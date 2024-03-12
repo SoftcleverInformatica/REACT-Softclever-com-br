@@ -24,7 +24,7 @@ function Clientes() {
 						</div>
 						<img
 							className="hidden w-1/3 self-end lg:block"
-							src="images/png/clients.png"
+							src="assets/images/png/clients.png"
 							alt="Um homem e uma mulher com roupas sociais apertando as mãos"
 						/>
 					</div>

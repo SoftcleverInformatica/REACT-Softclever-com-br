@@ -22,22 +22,22 @@ interface PageCard {
 
 const pageCards = [
 	{
-		image: "images/jpg/varejista.jpg",
+		image: "assets/images/jpg/varejista.jpg",
 		title: "COMÉRCIO VAREJISTA",
 		text: "Software completo para o Comércio Varejista. O Sírius S@T e NFCe oferece recursos facilitados e controles via WEB, APP Pré Vendas e Comandas, Market Place, Cartão de Crédito via TEF...",
 	},
 	{
-		image: "images/jpg/atacado.jpg",
+		image: "assets/images/jpg/atacado.jpg",
 		title: "ATACADO E DISTRIBUIÇÃO",
 		text: "Software completo para o Atacado e Distribuição. O Sírius ERP oferece recursos automatizados para emissão de NFEs e CTEs, Controle de Vendas, Financeiro, Compras, SPED Fiscal, Bloco K...",
 	},
 	{
-		image: "images/jpg/assistencia.jpg",
+		image: "assets/images/jpg/assistencia.jpg",
 		title: "SERVIÇOS E ASSISTÊNCIAS TÉCNICAS",
 		text: "Software completo para o Serviços e Assistências Técnicas. O Sírius Serviços oferece recursos automatizados para emissão de Ordens de Serviços, Orçamentos, Notas Fiscais de Serviços...",
 	},
 	{
-		image: "images/jpg/fabril.jpg",
+		image: "assets/images/jpg/fabril.jpg",
 		title: "PRODUÇÃO / FABRIL",
 		text: "Software completo para a Produção Fabril. O Sírius ERP oferece controles e recursos facilitados para a emissão de Ordens de Produção, Controle de Matérias Primas, Produtos Acabados...",
 	},
@@ -160,19 +160,19 @@ function Home() {
 						"Muito mais do que um cliente, tratamos a sua empresa como membro do nosso grupo."
 					</h2>
 					<div className="grid w-full max-w-screen-lg grid-cols-1 gap-8 sm:grid-cols-6 md:px-16 lg:px-32">
-						<img src="images/clients/rikwil.png" alt="" className="grid-item w-32 justify-self-center" />
-						<img src="images/clients/otica-indaia.png" alt="" className="grid-item w-32 justify-self-center" />
-						<img src="images/clients/villa-cerroni.png" alt="" className="grid-item w-32 justify-self-center" />
-						<img src="images/clients/cia-das-letras.png" alt="" className="grid-item w-32 justify-self-center" />
-						<img src="images/clients/yhalub.png" alt="" className="grid-item w-32 justify-self-center" />
-						<img src="images/clients/colormix-white.png" alt="" className="grid-item w-32 justify-self-center" />
+						<img src="assets/images/clients/rikwil.png" alt="" className="grid-item w-32 justify-self-center" />
+						<img src="assets/images/clients/otica-indaia.png" alt="" className="grid-item w-32 justify-self-center" />
+						<img src="assets/images/clients/villa-cerroni.png" alt="" className="grid-item w-32 justify-self-center" />
+						<img src="assets/images/clients/cia-das-letras.png" alt="" className="grid-item w-32 justify-self-center" />
+						<img src="assets/images/clients/yhalub.png" alt="" className="grid-item w-32 justify-self-center" />
+						<img src="assets/images/clients/colormix-white.png" alt="" className="grid-item w-32 justify-self-center" />
 					</div>
 				</section>
 				<section className="flex w-full flex-col items-center justify-center gap-8 bg-background p-8 md:p-16 lg:flex-row lg:gap-0 xl:py-8">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
 						<div className="relative hidden w-full max-w-[50%] rounded-md lg:block">
-							<img src="images/png/illustrative-ui.png" className="absolute left-60 top-28 h-40 -translate-x-1/2 -translate-y-1/2"></img>
-							<img src="images/png/macOK.png" className="absolute left-48 top-40 h-40 -translate-x-1/2 -translate-y-1/2"></img>
+							<img src="assets/images/png/illustrative-ui.png" className="absolute left-60 top-28 h-40 -translate-x-1/2 -translate-y-1/2"></img>
+							<img src="assets/images/png/macOK.png" className="absolute left-48 top-40 h-40 -translate-x-1/2 -translate-y-1/2"></img>
 						</div>
 						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[50%]">
 							<h3 className="w-full font-bold text-third">A SOFT CLEVER</h3>

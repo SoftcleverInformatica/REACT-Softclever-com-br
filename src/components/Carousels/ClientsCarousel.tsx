@@ -646,7 +646,7 @@ function ClientsCarousel() {
 
 // Função para converter o link do YouTube em um link de incorporação
 function getImageSrc(src: string): string {
-	return `images/reviews/${src}`
+	return `assets/images/reviews/${src}`
 }
 
 export default ClientsCarousel
