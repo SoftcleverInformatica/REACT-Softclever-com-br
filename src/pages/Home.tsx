@@ -145,11 +145,11 @@ function Home() {
 						></iframe>
 						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[50%]">
 							<h3 className="w-full font-bold text-third">A SOFT CLEVER</h3>
-							<h2 className="w-full text-3xl font-black text-second">Mais de 28 anos de experiência</h2>
+							<h2 className="w-full text-3xl font-black text-second">Mais de {new Date().getFullYear() - 1994} anos de experiência</h2>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
-								Com mais de 25 anos de experiência, nossa equipe treinada esta apta a resolver em um curto prazo de tempo qualquer necessidade
-								dos nossos clientes com as melhores ferramentas do mercado de TI. Muito mais do que um cliente, tratamos a sua empresa como
-								membro do nosso grupo.
+								Com mais de {new Date().getFullYear() - 1994} anos de experiência, nossa equipe treinada esta apta a resolver em um curto prazo
+								de tempo qualquer necessidade dos nossos clientes com as melhores ferramentas do mercado de TI. Muito mais do que um cliente,
+								tratamos a sua empresa como membro do nosso grupo.
 							</p>
 						</div>
 					</div>
@@ -175,13 +175,13 @@ function Home() {
 							<img src="assets/images/png/macOK.png" className="absolute left-48 top-40 h-40 -translate-x-1/2 -translate-y-1/2"></img>
 						</div>
 						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[50%]">
-							<h3 className="w-full font-bold text-third">A SOFT CLEVER</h3>
-							<h2 className="w-full text-3xl font-black text-second">Mais de 28 anos de experiência</h2>
+							<h3 className="w-full font-bold text-third">CONTABILIDADE, SOFTWARE E HARDWARE</h3>
+							<h2 className="w-full text-3xl font-black text-second">Seja nosso Parceiro</h2>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
-								Com mais de 25 anos de experiência, nossa equipe treinada esta apta a resolver em um curto prazo de tempo qualquer necessidade
-								dos nossos clientes com as melhores ferramentas do mercado de TI. Muito mais do que um cliente, tratamos a sua empresa como
-								membro do nosso grupo.
+								Disponibilizamos um modelo de parceria com benefícios exclusivos e especiais para Empresas de Software, Hardware e
+								Contabilidades, proporcionando a melhor solução e modelo de negócio ao nosso cliente.
 							</p>
+							<p className="w-full text-base font-medium text-[#3c4a54]">Descubra todos os benefícios de se unir ao nosso time.</p>
 						</div>
 					</div>
 				</section>
