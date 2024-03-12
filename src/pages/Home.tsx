@@ -101,8 +101,8 @@ const PageCard = ({ image, title, text }: PageCard) => {
 
 const Cards = () => {
 	return (
-		<section className="item-center flex w-full flex-col justify-center gap-8 sm:max-w-3xl lg:h-28 lg:max-w-screen-lg lg:flex-row lg:gap-0">
-			<div className="flex w-full flex-col flex-wrap justify-between gap-4 p-4 sm:max-w-3xl sm:flex-row lg:max-w-screen-lg lg:-translate-y-[10rem] lg:flex-nowrap xl:p-0">
+		<section className="item-center flex w-full flex-col justify-center gap-8 sm:max-w-3xl lg:h-36 lg:max-w-screen-lg lg:flex-row lg:gap-0">
+			<div className="flex w-full flex-col flex-wrap justify-between gap-4 p-4 sm:max-w-3xl sm:flex-row lg:max-w-screen-lg lg:-translate-y-[8rem] lg:flex-nowrap xl:p-0">
 				{cards.map((card, index) => (
 					<Card key={index} icon={card.icon} title={card.title} text={card.text} link={card.link}></Card>
 				))}
