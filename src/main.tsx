@@ -13,11 +13,16 @@ import SatENfce from "./pages/SatENfce.tsx"
 import SolucoesFiscais from "./pages/SolucoesFiscais.tsx"
 import SpedEBlocoK from "./pages/SpedEBlocoK.tsx"
 import Suporte from "./pages/Suporte.tsx"
+import Home2 from "./pages/test_a_b/Home2.tsx"
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Home />,
+	},
+	{
+		path: "/home2",
+		element: <Home2 />,
 	},
 	{
 		path: "/politica-de-privacidade",
