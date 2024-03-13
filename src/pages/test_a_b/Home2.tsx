@@ -1,11 +1,11 @@
 import { ReactNode } from "react"
 import { PiGearSixThin, PiHandbagThin, PiMoneyThin, PiStorefrontThin } from "react-icons/pi"
 import { Link } from "react-router-dom"
-import HomeBrandsCarousel from "../../components/Carousels/HomeBrandsCarousel"
 import DataCounters from "../../components/DataCounters"
 import Footer from "../../components/Footer"
 import Menu from "../../components/Menu"
 import Whatsapp from "../../components/Whatsapp"
+import HomeBrandsCarousel from "./HomeBrandsCarousel"
 import HomeCarousel2 from "./HomeCarousel2"
 
 interface Card {
