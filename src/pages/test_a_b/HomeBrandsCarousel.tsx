@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useState } from "react"
 
 const brands = [
+	"assets/images/clients/binelli-white2.png",
 	"assets/images/clients/bax-white.png",
-	"assets/images/clients/bollatel-white.png",
-	"assets/images/clients/ESCALEVE.jpeg",
 	"assets/images/clients/colormix-white.png",
-	"assets/images/clients/PONTO DO PADEIRO.png",
-	"assets/images/clients/COOPERPECAS.png",
-	"assets/images/clients/aia-white.png",
+	"assets/images/clients/portoro-white.png",
+	"assets/images/clients/escaleve-white.png",
+	"assets/images/clients/bollatel-white2.png",
+	"assets/images/clients/polar-white.png",
+	"assets/images/clients/coopercas-white.png",
 ]
 
 function HomeBrandsCarousel() {
@@ -57,7 +58,7 @@ function HomeBrandsCarousel() {
 		const interval = setInterval(() => {
 			if (init) {
 				setInit(false)
-				setSlideTime(slideTime * 5)
+				setSlideTime(slideTime * 2)
 			}
 			nextSlide()
 		}, slideTime * 1000)
@@ -71,17 +72,23 @@ function HomeBrandsCarousel() {
 	}, [currentSlide, nextSlide, slideTime, init])
 
 	return (
-		<div className="item-center flex w-full justify-center p-8 sm:p-16">
+		<div className="item-center flex w-full justify-center">
 			<div className="item-center flex w-full flex-col justify-center gap-2 lg:max-w-screen-lg">
 				<div className="relative w-full">
 					<div className="overflow-hidden rounded-md">
-						<div className="flex ease-linear" style={{ transform: `translateX(-${translateX}%)`, transition: `transform ${slideTime}s` }}>
+						<div
+							className="flex items-center ease-linear"
+							style={{ transform: `translateX(-${translateX}%)`, transition: `transform ${slideTime}s` }}
+						>
 							{brands.map((image, index) => (
-								<div key={index} className="relative w-full flex-none overflow-hidden p-6 sm:w-1/2 md:w-1/3 lg:w-1/4">
-									<div className="relative sm:px-4">
+								<div
+									key={index}
+									className="relative aspect-[374/150] w-full flex-none overflow-hidden p-4 sm:w-1/2 sm:p-2 md:w-1/3 lg:w-1/4 lg:p-0"
+								>
+									<div className="relative flex h-full items-center justify-center sm:px-4">
 										<img
 											src={image} // Obtém o link de incorporação do YouTube
-											className="h-full w-full rounded-md"
+											className="max-h-full max-w-full rounded-md"
 										></img>
 									</div>
 								</div>
