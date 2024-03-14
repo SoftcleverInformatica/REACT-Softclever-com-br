@@ -3,10 +3,10 @@ import { PiGearSixThin, PiHandbagThin, PiMoneyThin, PiStorefrontThin } from "rea
 import { Link } from "react-router-dom"
 import DataCounters from "../../components/DataCounters"
 import Footer from "../../components/Footer"
-import Menu from "../../components/Menu"
 import Whatsapp from "../../components/Whatsapp"
 import HomeBrandsCarousel from "./HomeBrandsCarousel"
 import HomeCarousel2 from "./HomeCarousel2"
+import Menu2 from "./Menu2"
 
 interface Card {
 	icon: ReactNode
@@ -116,8 +116,8 @@ const PageCards = () => {
 	return (
 		<section className="flex w-full justify-center bg-background p-8 md:p-16">
 			<div className="flex w-full flex-col gap-4 sm:max-w-3xl lg:max-w-screen-lg">
-				<h3 className="w-full font-bold text-third">PARA A SUA EMPRESA</h3>
-				<h2 className="w-full text-3xl font-black text-second">Segmentos atendidos</h2>
+				<h3 className="w-full font-bold text-third">SOLUÇÕES PARA O SEU NEGÓCIO</h3>
+				<h2 className="w-full text-3xl font-black text-second">Segmentos Atendidos</h2>
 				<div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-4">
 					{pageCards.map((pageCard, index) => (
 						<PageCard key={index} image={pageCard.image} title={pageCard.title} text={pageCard.text}></PageCard>
@@ -131,7 +131,7 @@ const PageCards = () => {
 function Home() {
 	return (
 		<>
-			<Menu />
+			<Menu2 />
 			<main className="flex w-full flex-col items-center justify-center">
 				<HomeCarousel2 />
 				<Cards />
@@ -145,7 +145,7 @@ function Home() {
 							className="aspect-video w-full rounded-md lg:max-w-[50%]"
 						></iframe>
 						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[50%]">
-							<h3 className="w-full font-bold text-third">A SOFT CLEVER</h3>
+							<h3 className="w-full font-bold text-third">A Soft Clever</h3>
 							<h2 className="w-full text-3xl font-black text-second">Mais de {new Date().getFullYear() - 1994} anos de experiência</h2>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
 								Com mais de {new Date().getFullYear() - 1994} anos de experiência, nossa equipe treinada está apta para resolver em um curto
@@ -170,7 +170,7 @@ function Home() {
 							<img src="assets/images/png/macOK.png" className="absolute left-48 top-40 h-40 -translate-x-1/2 -translate-y-1/2" />
 						</div>
 						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[50%]">
-							<h3 className="w-full font-bold text-third">CONTABILIDADE, SOFTWARE E HARDWARE</h3>
+							<h3 className="w-full font-bold text-third">Contabilidade, Software e Hardware</h3>
 							<h2 className="w-full text-3xl font-black text-second">Seja nosso Parceiro</h2>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
 								Disponibilizamos um modelo de parceria com benefícios exclusivos e especiais para Empresas de Software, Hardware e
