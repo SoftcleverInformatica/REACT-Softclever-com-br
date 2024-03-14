@@ -53,7 +53,7 @@ const ChevronDown = ({ fill, size, height, width, ...props }: SvgProps) => {
 const menuItems = [
 	{ label: "A SOFT CLEVER", key: "a-soft-clever2" },
 	{ label: "SOLUÇÕES", key: "solucoes2" },
-	{ label: "CLIENTES", key: "clientes" },
+	{ label: "CLIENTES", key: "clientes2" },
 	{ label: "CONTATO", key: "contato" },
 	{ label: "SUPORTE", key: "suporte" },
 ]

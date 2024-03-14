@@ -3,10 +3,10 @@ import { PiGearSixThin, PiHandbagThin, PiMoneyThin, PiStorefrontThin } from "rea
 import { Link } from "react-router-dom"
 import DataCounters from "../../components/DataCounters"
 import Footer from "../../components/Footer"
-import Menu from "../../components/Menu"
 import Whatsapp from "../../components/Whatsapp"
 import HomeBrandsCarousel from "./HomeBrandsCarousel"
 import HomeCarousel2 from "./HomeCarousel2"
+import Menu2 from "./Menu2"
 
 interface Card {
 	icon: ReactNode
@@ -131,7 +131,7 @@ const PageCards = () => {
 function Home() {
 	return (
 		<>
-			<Menu />
+			<Menu2 />
 			<main className="flex w-full flex-col items-center justify-center">
 				<HomeCarousel2 />
 				<Cards />

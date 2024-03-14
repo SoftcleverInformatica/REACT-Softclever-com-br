@@ -2,17 +2,17 @@ import Footer from "../../components/Footer"
 import Header from "../../components/Header"
 import ItemsInSolution from "../../components/ItemsInSolution"
 import LateralNavBar from "../../components/LateralNavBar"
-import Menu from "../../components/Menu"
 import Products from "../../components/Products"
 import SupportWhatsapp from "../../components/SupportWhatsapp"
 import Whatsapp from "../../components/Whatsapp"
+import Menu2 from "./Menu2"
 
 function SpedEBlocoK2() {
 	const title = "SPED e Bloco K"
 
 	return (
 		<>
-			<Menu />
+			<Menu2 />
 			<Header title={title} subtitle="Imprescindível para todos os tipos de negócios" />
 			<main className="flex w-full flex-col items-center justify-center gap-8">
 				<div className="item-center flex w-full max-w-lg flex-col justify-center gap-8 p-8 sm:py-16 lg:max-w-screen-lg lg:flex-row lg:gap-0 xl:px-0">

@@ -1,13 +1,13 @@
 import ClientsCarousel from "../../components/Carousels/ClientsCarousel"
 import Footer from "../../components/Footer"
 import Header from "../../components/Header"
-import Menu from "../../components/Menu"
 import Whatsapp from "../../components/Whatsapp"
+import Menu2 from "./Menu2"
 
 function Clientes2() {
 	return (
 		<>
-			<Menu />
+			<Menu2 />
 			<Header title={"Nossos Clientes"} subtitle="PARCEIROS DE NEGÓCIOS" />
 			<main className="flex w-full flex-col items-center justify-center">
 				<div className="item-center flex w-full flex-col justify-center gap-8 px-8 pb-8 sm:px-16 sm:pb-0 lg:flex-row lg:gap-0">
