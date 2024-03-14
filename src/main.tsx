@@ -60,6 +60,22 @@ const router = createBrowserRouter([
 		path: "/sped-e-bloco-k",
 		element: <SpedEBlocoK />,
 	},
+	// {
+	// 	path: "/sat-e-nfc-e2",
+	// 	element: <SatENfce2 />,
+	// },
+	// {
+	// 	path: "/gestao-erp2",
+	// 	element: <GestaoErp2 />,
+	// },
+	// {
+	// 	path: "/solucoes-fiscais2",
+	// 	element: <SolucoesFiscais2 />,
+	// },
+	// {
+	// 	path: "/sped-e-bloco-k2",
+	// 	element: <SpedEBlocoK2 />,
+	// },
 ])
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

@@ -1,13 +1,13 @@
 import { useCallback, useEffect, useState } from "react"
 
 const brands = [
-	"assets/images/clients/BOLLATEL.png",
+	"assets/images/clients/bax-white.png",
+	"assets/images/clients/bollatel-white.png",
 	"assets/images/clients/ESCALEVE.jpeg",
-	"assets/images/clients/AIA.png",
-	"assets/images/clients/PONTO DO PADEIRO.png",
 	"assets/images/clients/colormix-white.png",
-	"assets/images/clients/BAX ARTIGOS FESTAS.png",
+	"assets/images/clients/PONTO DO PADEIRO.png",
 	"assets/images/clients/COOPERPECAS.png",
+	"assets/images/clients/aia-white.png",
 ]
 
 function HomeBrandsCarousel() {
@@ -77,7 +77,7 @@ function HomeBrandsCarousel() {
 					<div className="overflow-hidden rounded-md">
 						<div className="flex ease-linear" style={{ transform: `translateX(-${translateX}%)`, transition: `transform ${slideTime}s` }}>
 							{brands.map((image, index) => (
-								<div key={index} className="relative w-full flex-none overflow-hidden bg-third p-6 sm:w-1/2 md:w-1/3 lg:w-1/4">
+								<div key={index} className="relative w-full flex-none overflow-hidden p-6 sm:w-1/2 md:w-1/3 lg:w-1/4">
 									<div className="relative sm:px-4">
 										<img
 											src={image} // Obtém o link de incorporação do YouTube

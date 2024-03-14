@@ -50,64 +50,58 @@ const ChevronDown = ({ fill, size, height, width, ...props }: SvgProps) => {
 	)
 }
 
+const menuItems = [
+	{ label: "A SOFT CLEVER", key: "a-soft-clever2" },
+	{ label: "SOLUÇÕES", key: "solucoes2" },
+	{ label: "CLIENTES", key: "clientes" },
+	{ label: "CONTATO", key: "contato" },
+	{ label: "SUPORTE", key: "suporte" },
+]
+
+const solutionItems = [
+	{ key: "sat-e-nfc-e2", label: "S@T E NFC-e" },
+	{ key: "gestao-erp2", label: "GESTÃO ERP" },
+	{ key: "solucoes-fiscais2", label: "SOLUÇÕES FISCAIS" },
+	{ key: "sped-e-bloco-k2", label: "SPED E BLOCO K" },
+]
+
+const SolutionsDropdown = () => {
+	const icons = {
+		chevron: <ChevronDown fill="currentColor" size={16} />,
+	}
+
+	return (
+		<Dropdown>
+			<DropdownTrigger>
+				<Button disableRipple className="bg-transparent p-0 data-[hover=true]:bg-transparent " endContent={icons.chevron} radius="sm" variant="light">
+					<p className="text-ms font-bold text-first">SOLUÇÕES</p>
+				</Button>
+			</DropdownTrigger>
+			<DropdownMenu
+				aria-label="Dynamic Actions"
+				className="w-[340px]"
+				itemClasses={{
+					base: "gap-4",
+				}}
+				items={solutionItems}
+			>
+				{(solutionItem) => (
+					<DropdownItem
+						className="text-ms font-semibold text-second"
+						key={solutionItem.key}
+						textValue={solutionItem.label}
+						href={`/${solutionItem.key}`}
+					>
+						<span className="text-ms font-semibold text-second">{solutionItem.label}</span>
+					</DropdownItem>
+				)}
+			</DropdownMenu>
+		</Dropdown>
+	)
+}
+
 function Menu() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-	const menuItems = [
-		{ label: "A SOFT CLEVER", key: "a-soft-clever" },
-		{ label: "SOLUÇÕES", key: "solucoes" },
-		{ label: "CLIENTES", key: "clientes" },
-		{ label: "CONTATO", key: "contato" },
-		{ label: "SUPORTE", key: "suporte" },
-	]
-
-	const solutionItems = [
-		{ key: "sat-e-nfc-e", label: "S@T E NFC-e" },
-		{ key: "gestao-erp", label: "GESTÃO ERP" },
-		{ key: "solucoes-fiscais", label: "SOLUÇÕES FISCAIS" },
-		{ key: "sped-e-bloco-k", label: "SPED E BLOCO K" },
-	]
-
-	const SolutionsDropdown = () => {
-		const icons = {
-			chevron: <ChevronDown fill="currentColor" size={16} />,
-		}
-
-		return (
-			<Dropdown>
-				<DropdownTrigger>
-					<Button
-						disableRipple
-						className="bg-transparent p-0 data-[hover=true]:bg-transparent "
-						endContent={icons.chevron}
-						radius="sm"
-						variant="light"
-					>
-						<p className="text-ms font-bold text-first">SOLUÇÕES</p>
-					</Button>
-				</DropdownTrigger>
-				<DropdownMenu
-					aria-label="Dynamic Actions"
-					className="w-[340px]"
-					itemClasses={{
-						base: "gap-4",
-					}}
-					items={solutionItems}
-				>
-					{(solutionItem) => (
-						<DropdownItem
-							className="text-ms font-semibold text-second"
-							key={solutionItem.key}
-							textValue={solutionItem.label}
-							href={`/${solutionItem.key}`}
-						>
-							<span className="text-ms font-semibold text-second">{solutionItem.label}</span>
-						</DropdownItem>
-					)}
-				</DropdownMenu>
-			</Dropdown>
-		)
-	}
 
 	return (
 		<Navbar
@@ -120,7 +114,7 @@ function Menu() {
 		>
 			<NavbarContent>
 				<NavbarBrand className="aspect-[172/48] h-12">
-					<Link className="aspect-[172/48] h-12" to={"../"}>
+					<Link className="aspect-[172/48] h-12" to={"/"}>
 						<Image className="aspect-[172/48] h-12 rounded-none" src="assets/images/png/softclever-logo.png" />
 					</Link>
 				</NavbarBrand>
