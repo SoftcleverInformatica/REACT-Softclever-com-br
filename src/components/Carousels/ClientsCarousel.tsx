@@ -30,18 +30,6 @@ function ClientsCarousel() {
 			showFullComment: false,
 		},
 		{
-			name: "Buker engrenagens",
-			image: "Buker engrenagens.png",
-			// "localGuide": false,
-			// "commentsQuantity": 1,
-			// "photosQuantity": 0,
-			stars: 5,
-			date: "2 semanas atrás",
-			message:
-				"A Soft Clever resolveu-me um problema que durante muito tempo a tentar resolver, sem sucesso. Analisaram com o máximo cuidado, conseguiram identificar o problema, e ver a melhor solução. Somos gratos por essa parceria de tanto tempo!!!!",
-			showFullComment: false,
-		},
-		{
 			name: "Rosely Barbosa",
 			image: "Rosely Barbosa.png",
 			// "localGuide": false,
@@ -51,6 +39,18 @@ function ClientsCarousel() {
 			date: "2 semanas atrás",
 			message:
 				"Trabalhamos com a Soft Clever há mais de 10 anos, sempre nos atendeu bem, com cordialidade e rapidez. Nossas solicitações sempre foram atendidas.",
+			showFullComment: false,
+		},
+		{
+			name: "Buker engrenagens",
+			image: "Buker engrenagens.png",
+			// "localGuide": false,
+			// "commentsQuantity": 1,
+			// "photosQuantity": 0,
+			stars: 5,
+			date: "2 semanas atrás",
+			message:
+				"A Soft Clever resolveu-me um problema que durante muito tempo a tentar resolver, sem sucesso. Analisaram com o máximo cuidado, conseguiram identificar o problema, e ver a melhor solução. Somos gratos por essa parceria de tanto tempo!!!!",
 			showFullComment: false,
 		},
 		{
