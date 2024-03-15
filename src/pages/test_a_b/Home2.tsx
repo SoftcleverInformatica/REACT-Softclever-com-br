@@ -145,11 +145,11 @@ function Home() {
 							className="aspect-video w-full rounded-md lg:max-w-[50%]"
 						></iframe>
 						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[50%]">
-							<h3 className="w-full font-bold text-third">A Soft Clever</h3>
+							<h3 className="w-full font-bold text-third">Sobre a Soft Clever</h3>
 							<h2 className="w-full text-3xl font-black text-second">Mais de {new Date().getFullYear() - 1994} anos de experiência</h2>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
-								Com mais de {new Date().getFullYear() - 1994} anos de experiência, nossa equipe treinada está apta para resolver em um curto
-								prazo de tempo qualquer necessidade dos nossos clientes com as melhores ferramentas do mercado de TI.
+								Com mais de {new Date().getFullYear() - 1994} anos de experiência, nossa equipe treinada está pronta para atender rapidamente às
+								necessidades dos nossos clientes utilizando as melhores ferramentas do mercado de TI.
 							</p>
 						</div>
 					</div>
@@ -157,10 +157,10 @@ function Home() {
 				<PageCards />
 				<section className="flex w-full flex-col flex-wrap items-center justify-center gap-8 bg-header bg-cover bg-center px-8 py-32 md:px-16">
 					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">
-						"Muito mais do que um cliente, tratamos a sua empresa como membro do{" "}
-						<span className="underline decoration-third decoration-4">nosso grupo.</span>"
+						"Vamos além de uma relação cliente-fornecedor, tratamos a sua empresa como parte do nosso grupo."
+						<span className="underline decoration-third decoration-4">Confie em nós para o sucesso do seu negócio.</span>
 					</h2>
-					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">São mais de 12000 clientes atendidos desde 1994.</h2>
+					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">Mais de 12.000 clientes satisfeitos desde 1994.</h2>
 					<HomeBrandsCarousel />
 				</section>
 				<section className="flex w-full flex-col items-center justify-center gap-8 bg-background p-8 md:p-16 lg:flex-row lg:gap-0 xl:py-8">
@@ -170,13 +170,13 @@ function Home() {
 							<img src="assets/images/png/macOK.png" className="absolute left-48 top-40 h-40 -translate-x-1/2 -translate-y-1/2" />
 						</div>
 						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[50%]">
-							<h3 className="w-full font-bold text-third">Contabilidade, Software e Hardware</h3>
-							<h2 className="w-full text-3xl font-black text-second">Seja nosso Parceiro</h2>
+							<h3 className="w-full font-bold text-third">Soluções Integradas em Contabilidade, Software e Hardware</h3>
+							<h2 className="w-full text-3xl font-black text-second">Torne-se nosso Parceiro</h2>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
-								Disponibilizamos um modelo de parceria com benefícios exclusivos e especiais para Empresas de Software, Hardware e
-								Contabilidades, proporcionando a melhor solução e modelo de negócio ao nosso cliente.
+								Oferecemos um programa de parceria com vantagens exclusivas e especiais para Empresas de Software, Hardware e Contabilidade,
+								fornecendo as melhores soluções e modelos de negócio aos nossos parceiros.
 							</p>
-							<p className="w-full text-base font-medium text-[#3c4a54]">Descubra todos os benefícios de se unir ao nosso time.</p>
+							<p className="w-full text-base font-medium text-[#3c4a54]">Descubra todos os benefícios de se juntar à nossa rede de parceiros.</p>
 						</div>
 					</div>
 				</section>
