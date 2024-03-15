@@ -1,14 +1,10 @@
 import DataCounters from "../../components/DataCounters"
 import Footer from "../../components/Footer"
-import Header from "../../components/Header"
 import Whatsapp from "../../components/Whatsapp"
-import Menu2 from "./Menu2"
 
 function ASoftClever2() {
 	return (
 		<>
-			<Menu2 />
-			<Header title={"A Soft Clever"} subtitle="Nossos valores" />
 			<main className="flex w-full flex-col items-center justify-center p-8">
 				<div className="item-center flex w-full flex-col justify-center gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row lg:gap-0">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
