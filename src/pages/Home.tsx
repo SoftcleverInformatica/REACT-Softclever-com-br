@@ -48,25 +48,25 @@ const cards = [
 		icon: <PiStorefrontThin className="-translate-x-1 text-third" size={60} />,
 		title: "SAT e NFC-e",
 		text: "Ideal para pequenos e médios comércios.",
-		link: "sat-e-nfc-e",
+		link: "/sat-e-nfc-e",
 	},
 	{
 		icon: <PiGearSixThin className="-translate-x-1 text-third" size={60} />,
 		title: "Gestão ERP",
 		text: "Gestão Empresarial de melhor custo benefício.",
-		link: "gestao-erp",
+		link: "/gestao-erp",
 	},
 	{
 		icon: <PiMoneyThin className="-translate-x-1 text-third" size={60} />,
 		title: "Soluções Fiscais",
 		text: "Necessário para todos os tipos de negócios.",
-		link: "solucoes-fiscais",
+		link: "/solucoes-fiscais",
 	},
 	{
 		icon: <PiHandbagThin className="-translate-x-1 text-third" size={60} />,
 		title: "SPED e Bloco K",
 		text: "Impostos de Entrada e Saída dos produtos.",
-		link: "sped-e-bloco-k",
+		link: "/sped-e-bloco-k",
 	},
 ]
 
