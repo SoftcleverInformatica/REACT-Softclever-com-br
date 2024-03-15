@@ -49,30 +49,6 @@ const DataCounters = () => {
 		)
 	}
 
-	return (
-		<>
-			<div className="flex w-full flex-wrap p-8 sm:max-w-3xl lg:max-w-screen-lg">
-				<DataCounter
-					classNames="py-4 sm:pr-4 sm:border-r-1 border-[#bcced8]"
-					icon={<FaRegUser className="text-white" size={20} />}
-					title="USUÁRIOS"
-					value={12000}
-				/>
-				<DataCounter
-					classNames="py-4 sm:pl-4 lg:border-r-1 border-[#bcced8]"
-					icon={<FaUsers className="text-white" size={25} />}
-					title="CLIENTES"
-					value={3000}
-				/>
-				<DataCounter
-					classNames="py-4 sm:pr-4 sm:border-r-1 border-[#bcced8] lg:pl-4"
-					icon={<LuCable className="text-white" size={23} />}
-					title="PROJETOS"
-					value={1000}
-				/>
-				<DataCounter classNames="py-4 sm:pl-4" icon={<GrUserManager className="text-white" size={23} />} title="NOSSA EQUIPE" value={20} />
-			</div>
-		</>
-	)
+    return <p>a</p>
 }
 export default DataCounters
