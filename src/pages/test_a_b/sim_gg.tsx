@@ -1,6 +1,4 @@
 import DataCounters from "../../components/DataCounters"
-import Footer from "../../components/Footer"
-import Whatsapp from "../../components/Whatsapp"
 
 function ASoftClever2() {
 	return (
@@ -32,8 +30,6 @@ function ASoftClever2() {
 				</div>
 				<DataCounters />
 			</main>
-			<Footer />
-			<Whatsapp />
 		</>
 	)
 }
