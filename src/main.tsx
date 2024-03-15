@@ -27,10 +27,6 @@ const router = createBrowserRouter([
 		element: <Home />,
 	},
 	{
-		path: "/home2",
-		element: <Home2 />,
-	},
-	{
 		path: "/politica-de-privacidade",
 		element: <PoliticaDePrivacidade />,
 	},
@@ -65,6 +61,10 @@ const router = createBrowserRouter([
 	{
 		path: "/sped-e-bloco-k",
 		element: <SpedEBlocoK />,
+	},
+	{
+		path: "/home2",
+		element: <Home2 />,
 	},
 	{
 		path: "/a-soft-clever2",
