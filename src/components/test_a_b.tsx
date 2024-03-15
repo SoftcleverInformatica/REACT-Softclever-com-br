@@ -35,34 +35,6 @@ const DataCounters = () => {
 			return currentValue
 		}
 
-		useEffect(() => {
-			const options = {
-				root: null,
-				rootMargin: "0px",
-				threshold: 0.1, // Define o limiar de visibilidade para 10%
-			}
-
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						setIsVisible(true) // Define como visível quando estiver dentro da viewport
-					}
-				})
-			}, options)
-
-			const currentRef = dataCounterRef.current // Armazena a referência atual em uma variável local
-
-			if (currentRef) {
-				observer.observe(currentRef)
-			}
-
-			return () => {
-				if (currentRef) {
-					observer.unobserve(currentRef) // Para de observar quando o componente for desmontado
-				}
-			}
-		}, [])
-
 		return (
 			<div ref={dataCounterRef} className={`${classNames} flex w-full gap-4 sm:max-w-[50%] lg:w-[25%] lg:flex-grow`}>
 				<div className="flex h-12 w-12 items-center justify-center rounded bg-second">{icon}</div>
