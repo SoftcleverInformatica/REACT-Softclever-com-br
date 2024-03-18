@@ -28,11 +28,11 @@ function SatENfce() {
 							<h3 className="text-lg font-extrabold text-second sm:text-2xl">SOBRE O SÍRIUS S@T E SÍRIUS NFC-E</h3>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
 								Sistema de gestão completo, simples e prático, com tecnologia avançada, está em constante atualização, crescimento e com
-								milhares de Comércios atendidos. Atuando em todos os estados, disponibilizamos as melhores funcionalidades para atender a
-								qualquer tipo de Comércio com vendas em atacado, varejo e serviços.
+								milhares de comércios atendidos. Atuando em todos os estados, disponibilizamos as melhores funcionalidades para atender a
+								qualquer tipo de comércio com vendas em atacado, varejo e serviços.
 							</p>
 							<p className="w-full text-base font-medium text-[#3c4a54]">
-								Sistema homologado na Secretaria da Fazenda, atende completamente a toda Legislação Fiscal exigida pela SEFAZ de forma eficaz e
+								Sistema homologado na Secretaria da Fazenda, atende completamente a toda legislação fiscal exigida pela SEFAZ de forma eficaz e
 								totalmente simplificada.
 							</p>
 							<ItemsInSolution

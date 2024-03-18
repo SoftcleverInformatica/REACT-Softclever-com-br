@@ -1,6 +1,7 @@
 import { ReactNode } from "react"
 import { PiGearSixThin, PiHandbagThin, PiMoneyThin, PiStorefrontThin } from "react-icons/pi"
 import { Link } from "react-router-dom"
+import HomeBrandsCarousel from "../components/Carousels/HomeBrandsCarousel"
 import HomeCarousel from "../components/Carousels/HomeCarousel"
 import DataCounters from "../components/DataCounters"
 import Footer from "../components/Footer"
@@ -68,17 +69,6 @@ const cards = [
 		text: "Impostos de Entrada e Saída dos produtos.",
 		link: "/sped-e-bloco-k",
 	},
-]
-
-const brands = [
-	"assets/images/clients/binelli-white2.png",
-	"assets/images/clients/bax-white.png",
-	"assets/images/clients/colormix-white.png",
-	"assets/images/clients/portoro-white.png",
-	"assets/images/clients/escaleve-white.png",
-	"assets/images/clients/bollatel-white2.png",
-	"assets/images/clients/polar-white.png",
-	"assets/images/clients/coopercas-white.png",
 ]
 
 const Card = ({ icon, title, text, link }: Card) => {
@@ -167,22 +157,13 @@ function Home() {
 				<PageCards />
 				<section className="flex w-full flex-col flex-wrap items-center justify-center gap-8 bg-header bg-cover bg-center px-8 py-32 md:px-16">
 					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">
-						"Muito mais do que um cliente, tratamos a sua empresa como membro do{" "}
-						<span className="underline decoration-third decoration-4">nosso grupo.</span>"
+						"Vamos além de uma relação cliente-fornecedor, tratamos a sua empresa como parte do nosso grupo."
 					</h2>
-					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">São mais de 12000 clientes atendidos desde 1994.</h2>
-					<div className="flex w-full flex-col flex-wrap justify-center sm:flex-row">
-						{brands.map((image, index) => (
-							<div key={index} className="aspect-[374/150] w-full p-4 sm:w-1/2 sm:p-2 md:w-1/3 lg:w-1/4 lg:p-0">
-								<div className="relative flex h-full items-center justify-center sm:px-4">
-									<img
-										src={image} // Obtém o link de incorporação do YouTube
-										className="max-h-full max-w-full rounded-md"
-									></img>
-								</div>
-							</div>
-						))}
-					</div>
+					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white underline decoration-third decoration-4">
+						Confie em nós para o sucesso do seu negócio.
+					</h2>
+					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">Mais de 12.000 clientes satisfeitos desde 1994.</h2>
+					<HomeBrandsCarousel />
 				</section>
 				<section className="flex w-full flex-col items-center justify-center gap-8 bg-background p-8 md:p-16 lg:flex-row lg:gap-0 xl:py-8">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">

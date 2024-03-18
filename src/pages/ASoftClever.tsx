@@ -4,7 +4,7 @@ import Header from "../components/Header"
 import Menu from "../components/Menu"
 import Whatsapp from "../components/Whatsapp"
 
-function ASoftClever2() {
+function ASoftClever() {
 	return (
 		<>
 			<Menu />
@@ -43,4 +43,4 @@ function ASoftClever2() {
 	)
 }
 
-export default ASoftClever2
+export default ASoftClever
