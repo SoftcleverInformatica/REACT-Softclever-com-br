@@ -52,7 +52,7 @@ function SpedEBlocoK() {
 						</div>
 						<div className="flex w-full flex-col gap-4 lg:max-w-[33%]">
 							<SupportWhatsapp />
-							<img src="assets/images/png/erp.png" alt="Varejista com avental vermelho" />
+							<img src="assets/images/png/sped.png" alt="Varejista com avental vermelho" />
 							<h3 className="w-full pt-4 font-bold text-third">SOFT CLEVER</h3>
 							<h2 className="w-full text-3xl font-black text-second">Nossas Soluções</h2>
 							<LateralNavBar />
