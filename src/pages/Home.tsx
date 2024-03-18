@@ -162,7 +162,7 @@ function Home() {
 					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white underline decoration-third decoration-4">
 						Confie em nós para o sucesso do seu negócio.
 					</h2>
-					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">Mais de 12.000 clientes satisfeitos desde 1994.</h2>
+					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">Mais de 12.000 usuários satisfeitos desde 1994.</h2>
 					<HomeBrandsCarousel />
 				</section>
 				<section className="flex w-full flex-col items-center justify-center gap-8 bg-background p-8 md:p-16 lg:flex-row lg:gap-0 xl:py-8">
