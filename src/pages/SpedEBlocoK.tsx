@@ -11,7 +11,7 @@ function SpedEBlocoK() {
 	return (
 		<>
 			<Menu />
-			<Header title={"Sped e Bloco K"} subtitle="Necessário para todos os negócios" />
+			<Header title={"Sped e Bloco K"} subtitle="IMPOSTOS DE ENTRADA E SAÍDA DE PRODUTOS" />
 			<main className="flex w-full flex-col items-center justify-center gap-8">
 				<div className="item-center flex w-full max-w-lg flex-col justify-center gap-8 p-8 sm:py-16 lg:max-w-screen-lg lg:flex-row lg:gap-0 xl:px-0">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
