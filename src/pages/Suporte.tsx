@@ -15,7 +15,12 @@ function Suporte() {
 			<Header title={"Suporte"} subtitle="Entre em contato" />
 			<main className="flex w-full flex-col items-center justify-center gap-8">
 				<div className="item-center flex w-full flex-col justify-center gap-8 bg-background p-8 sm:p-16 lg:flex-row lg:gap-0">
-					<div className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row">
+					<Link
+						className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row"
+						to={
+							"https://web.whatsapp.com/send?phone=5511992810249&text=Ol%C3%A1%2C%20Soft%20Clever.%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+						}
+					>
 						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%]">
 							<h3 className="text-lg font-extrabold text-second sm:text-2xl">COMO PODEMOS TE AJUDAR?</h3>
 							<ul className="text-third" style={{ listStyleType: "disc", listStylePosition: "inside" }}>
@@ -33,7 +38,7 @@ function Suporte() {
 						<div className="flex w-full flex-col gap-8 lg:max-w-[33%]">
 							<SupportWhatsapp />
 						</div>
-					</div>
+					</Link>
 				</div>
 				<div className="flex w-full flex-col items-center justify-center gap-8 p-8 sm:p-16">
 					<h3 className="w-full max-w-screen-lg text-lg font-extrabold text-second sm:text-2xl">DOWNLOAD ACESSO REMOTO</h3>
