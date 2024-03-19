@@ -130,7 +130,7 @@ function SatENfce() {
 							"Treinamento remoto incluso",
 							"Com fidelidade de 6 meses",
 							"A Vista ou Parcelado*",
-							"Desconto de até 12,5%*",
+							"Desconto em relação ao valor mensal. Consulte",
 						],
 					}}
 					anual={{
@@ -140,7 +140,7 @@ function SatENfce() {
 							"Treinamento remoto incluso",
 							"Com fidelidade de 12 meses",
 							"A Vista ou Parcelado*",
-							"Desconto de até 25%*",
+							"Desconto em relação ao valor mensal. Consulte",
 						],
 					}}
 				/>

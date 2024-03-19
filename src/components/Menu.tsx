@@ -142,7 +142,7 @@ function Menu() {
 					<FontAwesomeIcon icon={faPhone} style={{ color: "#03BFCB" }} />
 					<span className="text-ms font-bold text-third">(11) 3991-3923 /</span>
 					<FaWhatsapp className="text-third" size={20} />
-					<Link to={"https://web.whatsapp.com/send?phone=5511992810249"} className="text-ms font-bold text-third">
+					<Link to={"https://web.whatsapp.com/send?phone=5511992810249"} target="_blank" className="text-ms font-bold text-third">
 						(11) 99281-0249
 					</Link>
 				</NavbarItem>

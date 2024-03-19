@@ -147,10 +147,9 @@ function Home() {
 						<div className="flex w-full flex-col gap-4 self-center lg:max-w-[50%]">
 							<h3 className="w-full font-bold text-third">A SOFT CLEVER</h3>
 							<h2 className="w-full text-3xl font-black text-second">Mais de {new Date().getFullYear() - 1994} anos de experiência</h2>
-							<p className="w-full text-base font-medium text-[#3c4a54]">
-								Com mais de {new Date().getFullYear() - 1994} anos de experiência, nossa equipe treinada esta apta a resolver em um curto prazo
-								de tempo qualquer necessidade dos nossos clientes com as melhores ferramentas do mercado de TI.
-							</p>
+							<p className="w-full text-base font-medium text-[#3c4a54]">Mais de 12000 usuários atendidos.</p>
+							<p className="w-full text-base font-medium text-[#3c4a54]">Desenvolvemos soluções desde 1994.</p>
+							<p className="w-full text-base font-medium text-[#3c4a54]">Somos indicados por centenas de contadores.</p>
 						</div>
 					</div>
 				</section>
@@ -162,7 +161,7 @@ function Home() {
 					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white underline decoration-third decoration-4">
 						Confie em nós para o sucesso do seu negócio.
 					</h2>
-					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">Mais de 12.000 usuários satisfeitos desde 1994.</h2>
+					<h2 className="w-full max-w-2xl text-center text-2xl font-black text-white">Mais de 12.000 usuários atendidos desde 1994.</h2>
 					<HomeBrandsCarousel />
 				</section>
 				<section className="flex w-full flex-col items-center justify-center gap-8 bg-background p-8 md:p-16 lg:flex-row lg:gap-0 xl:py-8">

@@ -3,6 +3,7 @@ import { ChangeEvent, FormEvent, useState } from "react"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
+import SupportWhatsapp from "../components/SupportWhatsapp"
 import Whatsapp from "../components/Whatsapp"
 
 interface FormValues {
@@ -99,10 +100,7 @@ function Contato() {
 				<div className="item-center flex w-full flex-col justify-center gap-8 p-8 sm:p-16 lg:flex-row lg:gap-0">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl sm:flex-row lg:max-w-screen-lg">
 						<div className="flex w-full flex-col gap-8 self-center sm:max-w-[33%]">
-							<div className="w-full border-b-1 border-[#bcced8] pb-8">
-								<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Whatsapp</h3>
-								<p className="text-ms font-medium text-text sm:text-sm">(11) 99281-0249</p>
-							</div>
+							<SupportWhatsapp />
 							<div className="w-full border-b-1 border-[#bcced8] pb-8">
 								<h3 className="pb-6 text-2xl font-bold text-second sm:text-3xl">Telefone</h3>
 								<p className="text-ms font-medium text-text sm:text-sm">(11) 3991-3923</p>

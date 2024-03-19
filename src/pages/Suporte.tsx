@@ -1,9 +1,10 @@
+import { faPhone } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
 import VideosCarousel from "../components/Carousels/VideosCarousel"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
-import SupportWhatsapp from "../components/SupportWhatsapp"
 import Whatsapp from "../components/Whatsapp"
 
 function Suporte() {
@@ -14,33 +15,29 @@ function Suporte() {
 			<Menu />
 			<Header title={"Suporte"} subtitle="Entre em contato" />
 			<main className="flex w-full flex-col items-center justify-center gap-8">
-				<div className="item-center flex w-full flex-col justify-center gap-8 bg-background p-8 sm:p-16 lg:flex-row lg:gap-0">
-					<Link
-						className="flex w-full flex-col gap-8 sm:max-w-3xl lg:max-w-screen-lg lg:flex-row"
-						to={
-							"https://web.whatsapp.com/send?phone=5511992810249&text=Ol%C3%A1%2C%20Soft%20Clever.%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
-						}
-					>
-						<div className="flex w-full flex-col gap-8 self-center lg:max-w-[67%]">
-							<h3 className="text-lg font-extrabold text-second sm:text-2xl">COMO PODEMOS TE AJUDAR?</h3>
-							<ul className="text-third" style={{ listStyleType: "disc", listStylePosition: "inside" }}>
-								<li className="text-xl text-third">
-									<span className="text-base text-text">Download Acesso Remoto</span>
-								</li>
-								<li className="text-xl text-third">
-									<span className="text-base text-text">Vídeos demonstrativos</span>
-								</li>
-								<li className="text-xl text-third">
-									<span className="text-base text-text">Falar com o Suporte</span>
-								</li>
-							</ul>
-						</div>
-						<div className="flex w-full flex-col gap-8 lg:max-w-[33%]">
-							<SupportWhatsapp />
-						</div>
-					</Link>
-				</div>
 				<div className="flex w-full flex-col items-center justify-center gap-8 p-8 sm:p-16">
+					<p className="w-full max-w-screen-lg text-lg font-extrabold text-second sm:text-2xl">ATENDEMOS DE SEGUNDA A SEXTA DAS 08h-18h</p>
+					<div className="flex w-full  max-w-screen-lg flex-col items-center justify-between gap-8 lg:flex-row lg:gap-0">
+						<Link
+							className="flex w-full items-center justify-center lg:w-[30%]"
+							to={"https://drive.google.com/file/d/16Ghh0MIZA6u5_1Yb3t9S7y-EN58-ULQ0/view"}
+						>
+							<p className="flex w-full items-center justify-center gap-2 bg-background p-6 text-center text-base font-medium text-second">
+								<FontAwesomeIcon icon={faPhone} className="text-second" />
+								(11) 3991-3923
+							</p>
+						</Link>
+						<Link
+							className="flex w-full items-center justify-center lg:w-[30%]"
+							to={"https://drive.google.com/file/d/16Ghh0MIZA6u5_1Yb3t9S7y-EN58-ULQ0/view"}
+						>
+							<p className="flex w-full items-center justify-center gap-2 bg-background p-6 text-center text-base font-medium text-second">
+								<FontAwesomeIcon icon={faPhone} className="text-second" />
+								(11) 2361-8334
+							</p>
+						</Link>
+						<div className="flex w-full flex-col items-center justify-center lg:w-[30%]"></div>
+					</div>
 					<h3 className="w-full max-w-screen-lg text-lg font-extrabold text-second sm:text-2xl">DOWNLOAD ACESSO REMOTO</h3>
 					<div className="flex w-full  max-w-screen-lg flex-col items-center justify-between gap-8 lg:flex-row lg:gap-0">
 						<Link

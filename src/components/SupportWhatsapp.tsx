@@ -7,6 +7,7 @@ function SupportWhatsapp() {
 		<Link
 			className="relative h-24 w-full max-w-[336px]"
 			to={"https://web.whatsapp.com/send?phone=5511992810249&text=Ol%C3%A1%2C%20Soft%20Clever.%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."}
+			target="_blank"
 		>
 			<div className="absolute left-0 top-0 z-10 h-24 w-24 rounded-full border-4 border-white bg-support bg-cover shadow-lg"></div>
 			<FontAwesomeIcon

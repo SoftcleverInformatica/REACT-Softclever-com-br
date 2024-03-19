@@ -70,11 +70,6 @@ const HomeCarousel = () => {
 		}, 30000)
 	}
 
-	const createWhatsappLink = (planName: string) => {
-		const message = `Olá, gostaria de conhecer o plano *${planName}*.\n[_*URL:* www.softclever.com.br_]${location.pathname}.`
-		return `https://web.whatsapp.com/send?phone=5511992810249&text=${encodeURIComponent(message)}`
-	}
-
 	return (
 		<div className="item-center flex w-full flex-col items-center justify-center gap-2 bg-background bg-home bg-cover px-8 pt-8 sm:px-16 sm:pt-16">
 			<div className="flex max-h-[110vh] w-full max-w-screen-lg flex-col justify-center">
@@ -90,7 +85,7 @@ const HomeCarousel = () => {
 											<p className="w-full text-base font-medium text-[#3c4a54]">{slide.text}</p>
 											<div className="flex w-full gap-4 self-end">
 												<Link
-													to={createWhatsappLink(slide.title)}
+													to={"/contato"}
 													className="flex h-fit w-1/2 items-center justify-center bg-third p-4 text-xs font-semibold text-white transition-all hover:bg-second hover:text-sm hover:shadow-[0_10px_24px_rgba(0,0,0,0.3)] sm:p-4 sm:text-sm"
 												>
 													CONSULTAR
