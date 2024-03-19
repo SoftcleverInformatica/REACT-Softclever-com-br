@@ -1,3 +1,4 @@
+import VideosCarousel from "../components/Carousels/VideosCarousel"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import ItemsInSolution from "../components/ItemsInSolution"
@@ -8,6 +9,7 @@ import SupportWhatsapp from "../components/SupportWhatsapp"
 import Whatsapp from "../components/Whatsapp"
 
 function SpedEBlocoK() {
+	const videos = ["https://www.youtube.com/watch?v=83Pxy3TwN2w", "https://www.youtube.com/watch?v=GwttGRBPf1M"]
 	return (
 		<>
 			<Menu />
@@ -59,6 +61,7 @@ function SpedEBlocoK() {
 						</div>
 					</div>
 				</div>
+				<VideosCarousel videos={videos} />
 
 				<Products
 					title="Soft Clever"

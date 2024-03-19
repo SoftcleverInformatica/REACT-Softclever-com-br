@@ -121,7 +121,6 @@ function GestaoErp() {
 							"Treinamento remoto incluso",
 							"Sem fidelidade",
 							"Mensalidade via Boleto",
-							"Com taxa de implantação",
 						],
 					}}
 					semestral={{
@@ -131,7 +130,6 @@ function GestaoErp() {
 							"Treinamento remoto incluso",
 							"Com fidelidade de 6 meses",
 							"A Vista ou Parcelado*",
-							"Sem taxa de implantação",
 							"Desconto em relação ao valor mensal. Consulte",
 						],
 					}}
@@ -142,7 +140,6 @@ function GestaoErp() {
 							"Treinamento remoto incluso",
 							"Com fidelidade de 12 meses",
 							"A Vista ou Parcelado*",
-							"Sem taxa de implantação",
 							"Desconto em relação ao valor mensal. Consulte",
 						],
 					}}
