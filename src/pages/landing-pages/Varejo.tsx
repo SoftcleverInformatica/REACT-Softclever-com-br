@@ -1,14 +1,14 @@
-import VideosCarousel from "../components/carousels/VideosCarousel"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-import ItemsInSolution from "../components/ItemsInSolution"
-import LateralNavBar from "../components/LateralNavBar"
-import Menu from "../components/Menu"
-import Products from "../components/Products"
-import SupportWhatsapp from "../components/SupportWhatsapp"
-import Whatsapp from "../components/Whatsapp"
+import VideosCarousel from "../../components/carousels/VideosCarousel"
+import Footer from "../../components/Footer"
+import Header from "../../components/Header"
+import ItemsInSolution from "../../components/ItemsInSolution"
+import LateralNavBar from "../../components/LateralNavBar"
+import Menu from "../../components/Menu"
+import Products from "../../components/Products"
+import SupportWhatsapp from "../../components/SupportWhatsapp"
+import Whatsapp from "../../components/Whatsapp"
 
-function SpedEBlocoK() {
+function Varejo() {
 	const videos = ["https://www.youtube.com/watch?v=83Pxy3TwN2w", "https://www.youtube.com/watch?v=GwttGRBPf1M"]
 	return (
 		<>
@@ -102,4 +102,4 @@ function SpedEBlocoK() {
 	)
 }
 
-export default SpedEBlocoK
+export default Varejo

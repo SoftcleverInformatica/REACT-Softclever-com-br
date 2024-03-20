@@ -12,7 +12,7 @@ interface FormValues {
 	email: string
 	telefone: string
 	mensagem: string
-	site_que_enviou: string // Adicionado campo site_que_enviou
+	quem_enviou: string // Adicionado campo site_que_enviou
 }
 
 interface FormErrors {
@@ -30,7 +30,7 @@ function Contato() {
 		telefone: "",
 		empresa: "",
 		mensagem: "",
-		site_que_enviou: "www.softclever.com.br",
+		quem_enviou: "www.softclever.com.br",
 	}
 
 	const [formValues, setFormValues] = useState<FormValues>(initialFormValues)
@@ -44,10 +44,9 @@ function Contato() {
 
 	const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target
-		const newValue = value.replace(/\D/g, "")
 		setFormValues({
 			...formValues,
-			[name]: newValue,
+			[name]: value,
 		})
 		// Remover mensagem de erro ao começar a digitar
 		setFormErrors({
@@ -69,27 +68,33 @@ function Contato() {
 
 		setFormErrors(errors)
 
-		console.log("formValues: ", formValues)
-		if (Object.values(errors).every((error) => !error)) {
-			try {
-				const response = await fetch("https://www.api.emissorsatfiscal.net.br/email?token=S0ftCL5vEr!Td4iN70rm@t!CA", {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(formValues),
-				})
+		const headers = {
+			"Content-Type": "application/json",
+		}
+		formValues.mensagem = "Softclever | " + formValues.mensagem
+		const body = JSON.stringify(formValues)
+		async function request() {
+			if (Object.values(errors).every((error) => !error)) {
+				try {
+					const response = await fetch("https://www.api.emissorsatfiscal.net.br/email?token=S0ftCL5vEr!Td4iN70rm@t!CA", {
+						method: "POST",
+						headers: headers,
+						body: body,
+					})
 
-				if (response.ok) {
-					// Aqui você pode tratar a resposta do servidor se necessário
-					console.log("Formulário enviado com sucesso!")
-				} else {
-					console.error("Erro ao enviar o formulário:", response.statusText)
+					if (response.ok) {
+						// Aqui você pode tratar a resposta do servidor se necessário
+						console.log("Formulário enviado com sucesso!")
+					} else {
+						console.error("Erro ao enviar o formulário:", response.statusText)
+					}
+				} catch (error) {
+					console.error("Erro ao enviar o formulário:", error)
 				}
-			} catch (error) {
-				console.error("Erro ao enviar o formulário:", error)
 			}
 		}
+
+		request()
 	}
 
 	return (
