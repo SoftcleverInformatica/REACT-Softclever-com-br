@@ -1,7 +1,7 @@
 import { faPhone } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "react-router-dom"
-import VideosCarousel from "../components/Carousels/VideosCarousel"
+import VideosCarousel from "../components/carousels/VideosCarousel"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
