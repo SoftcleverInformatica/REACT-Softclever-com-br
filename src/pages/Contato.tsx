@@ -1,5 +1,6 @@
 import { Button, Input, Textarea } from "@nextui-org/react"
 import { ChangeEvent, FormEvent, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
@@ -24,6 +25,8 @@ interface FormErrors {
 }
 
 function Contato() {
+	const navigate = useNavigate()
+
 	const initialFormValues: FormValues = {
 		nome: "",
 		email: "",
@@ -41,6 +44,8 @@ function Contato() {
 		telefone: "",
 		mensagem: "",
 	})
+
+	const [isLoading, setIsLoading] = useState<boolean>(false)
 
 	const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
 		const { name, value } = e.target
@@ -67,6 +72,7 @@ function Contato() {
 		}
 
 		setFormErrors(errors)
+		setIsLoading(true)
 
 		const headers = {
 			"Content-Type": "application/json",
@@ -85,11 +91,14 @@ function Contato() {
 					if (response.ok) {
 						// Aqui você pode tratar a resposta do servidor se necessário
 						console.log("Formulário enviado com sucesso!")
+						navigate("/obrigado")
 					} else {
 						console.error("Erro ao enviar o formulário:", response.statusText)
 					}
 				} catch (error) {
 					console.error("Erro ao enviar o formulário:", error)
+				} finally {
+					setIsLoading(false)
 				}
 			}
 		}
@@ -101,7 +110,15 @@ function Contato() {
 		<>
 			<Menu />
 			<Header title={"Contato"} subtitle="Entre em contato" />
-			<main className="flex w-full flex-col items-center justify-center gap-8">
+
+			<main className="relative flex w-full flex-col items-center justify-center gap-8">
+				{isLoading ? (
+					<div className="min-w-screen absolute left-0 top-0 flex h-full min-h-screen w-full items-center justify-center bg-second bg-opacity-20">
+						<img src="assets/images/gif/loading.gif" className="h-32 w-32" alt="" />
+					</div>
+				) : (
+					""
+				)}
 				<div className="item-center flex w-full flex-col justify-center gap-8 p-8 sm:p-16 lg:flex-row lg:gap-0">
 					<div className="flex w-full flex-col gap-8 sm:max-w-3xl sm:flex-row lg:max-w-screen-lg">
 						<div className="flex w-full min-w-64 flex-col gap-8 self-center sm:max-w-[33%]">
@@ -170,8 +187,8 @@ function Contato() {
 								value={formValues.mensagem}
 								onChange={handleInputChange}
 							/>
-							<Button color="primary" type="submit">
-								Enviar
+							<Button color="primary" type="submit" disabled={isLoading}>
+								{isLoading ? "Enviando..." : "Enviar"}
 							</Button>
 						</form>
 					</div>
