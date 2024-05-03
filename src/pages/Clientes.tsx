@@ -1,4 +1,4 @@
-import ClientsCarousel from "../components/carousels/ClientsCarousel"
+import ClientsCarousel from "../components/Carousels/ClientsCarousel"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Menu from "../components/Menu"
